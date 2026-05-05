@@ -1,3 +1,5 @@
 .env
-originals/videos/_download_metadata.json
 originals/videos/
+originals/videos_compressed/
+originals/images/*.jpg
+originals/images/*.png

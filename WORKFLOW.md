@@ -12,6 +12,44 @@ How to add new wallpapers (videos or images) to the catalog and deploy them to t
   ```
 - For remote hosting (optional): rclone installed + Cloudflare R2 configured (see [R2 Setup](#cloudflare-r2-setup))
 
+## Pipeline Overview
+
+All scripts are run from the `wallpaper-catalog/` directory.
+
+### Bundled pipeline (content goes into APK)
+
+```
+┌──────────────────────────────────────────────────────────────────────┐
+│  1. python3 scripts/download_from_pixabay.py                         │
+│  2. bash scripts/compress_videos.sh                                  │
+│  3. bash scripts/generate_catalog.sh                                 │
+│  4. bash scripts/sync_to_app.sh                                      │
+│  5. git add docs/ && git commit -m "update" && git push              │
+│  6. cd ../live-wallpaper && ./gradlew assembleDebug                  │
+└──────────────────────────────────────────────────────────────────────┘
+```
+
+### Remote pipeline (content goes to Cloudflare R2)
+
+```
+┌──────────────────────────────────────────────────────────────────────┐
+│  1. python3 scripts/download_from_pixabay.py                         │
+│  2. bash scripts/compress_videos.sh                                  │
+│  3. bash scripts/generate_catalog.sh --remote                        │
+│  4. bash scripts/upload_to_r2.sh                                     │
+│  5. git add docs/wallpapers.json && git commit -m "update" && git push│
+│  6. Clear app cache on device to see new wallpapers                  │
+└──────────────────────────────────────────────────────────────────────┘
+```
+
+### Or use the all-in-one script
+
+```bash
+cd wallpaper-catalog
+bash scripts/run_all.sh            # bundled pipeline (steps 1-5)
+bash scripts/run_all.sh --remote   # remote pipeline (steps 1-5)
+```
+
 ## Quick Start
 
 ### Bundled wallpapers (packaged in APK)
@@ -22,7 +60,6 @@ bash scripts/run_all.sh
 cd ../live-wallpaper && ./gradlew assembleDebug
 ```
 
-Downloads → compresses → generates catalog → syncs to app assets → optional git push.
 Increases APK size. Best for the core set of wallpapers you want available offline.
 
 ### Remote wallpapers (hosted on Cloudflare R2)
@@ -32,7 +69,6 @@ cd wallpaper-catalog
 bash scripts/run_all.sh --remote
 ```
 
-Downloads → compresses → generates catalog (with R2 URLs) → uploads to R2 → optional git push.
 No APK size increase. App downloads content on demand. Requires R2 setup.
 
 ## Step-by-Step (Bundled)

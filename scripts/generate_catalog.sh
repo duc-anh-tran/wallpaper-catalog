@@ -3,6 +3,11 @@ set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(dirname "$SCRIPT_DIR")"
+
+if [ -f "$REPO_ROOT/.env" ]; then
+    export $(cat "$REPO_ROOT/.env" | grep -v '^#' | xargs)
+fi
+
 VIDEOS_DIR="$REPO_ROOT/originals/videos"
 IMAGES_DIR="$REPO_ROOT/originals/images"
 THUMBS_DIR="$REPO_ROOT/docs/thumbs"
@@ -11,6 +16,18 @@ VIDEO_METADATA="$VIDEOS_DIR/_download_metadata.json"
 IMAGE_METADATA="$IMAGES_DIR/_download_metadata.json"
 
 GITHUB_PAGES_BASE="https://duc-anh-tran.github.io/wallpaper-catalog"
+
+REMOTE_MODE=false
+R2_PUBLIC_URL="${R2_PUBLIC_URL:-}"
+for arg in "$@"; do
+    if [ "$arg" = "--remote" ]; then
+        REMOTE_MODE=true
+        if [ -z "$R2_PUBLIC_URL" ]; then
+            echo "Error: --remote requires R2_PUBLIC_URL to be set (in .env or exported)"
+            exit 1
+        fi
+    fi
+done
 
 if ! command -v ffmpeg &>/dev/null; then
     echo "Error: ffmpeg is not installed."
@@ -66,7 +83,7 @@ echo "  Image thumbnails created: $img_thumb_created, skipped: $img_thumb_skippe
 echo ""
 echo "=== Updating wallpapers.json ==="
 
-python3 - "$CATALOG" "$VIDEOS_DIR" "$IMAGES_DIR" "$VIDEO_METADATA" "$IMAGE_METADATA" "$GITHUB_PAGES_BASE" << 'PYTHON_SCRIPT'
+python3 - "$CATALOG" "$VIDEOS_DIR" "$IMAGES_DIR" "$VIDEO_METADATA" "$IMAGE_METADATA" "$GITHUB_PAGES_BASE" "$REMOTE_MODE" "$R2_PUBLIC_URL" << 'PYTHON_SCRIPT'
 import sys
 import os
 import json
@@ -77,6 +94,8 @@ images_dir = sys.argv[3]
 video_metadata_path = sys.argv[4]
 image_metadata_path = sys.argv[5]
 pages_base = sys.argv[6]
+remote_mode = sys.argv[7] == "true"
+r2_public_url = sys.argv[8].rstrip("/") if sys.argv[8] else ""
 
 if os.path.exists(catalog_path):
     with open(catalog_path) as f:
@@ -124,19 +143,26 @@ for filename in video_files:
         category = video_meta_by_filename[filename].get("category", "Nature")
 
     max_sort += 1
+    if remote_mode:
+        video_src = f"{r2_public_url}/videos/{filename}"
+        thumb_url = f"{r2_public_url}/thumbs/{vid_id}.jpg"
+    else:
+        video_src = f"bundled:videos/{filename}"
+        thumb_url = f"{pages_base}/thumbs/{vid_id}.jpg"
     entry = {
         "id": vid_id,
         "name": pretty_name,
         "category": category,
         "type": "video",
-        "video_source": f"bundled:videos/{filename}",
-        "thumbnail_url": f"{pages_base}/thumbs/{vid_id}.jpg",
+        "video_source": video_src,
+        "thumbnail_url": thumb_url,
         "is_premium": False,
         "sort_order": max_sort,
     }
     catalog["wallpapers"].append(entry)
     added += 1
-    print(f"  Added video: {vid_id} ({category})")
+    mode_label = "remote" if remote_mode else "bundled"
+    print(f"  Added video: {vid_id} ({category}) [{mode_label}]")
 
 # Add image entries
 if os.path.isdir(images_dir):
@@ -152,19 +178,26 @@ if os.path.isdir(images_dir):
             category = image_meta_by_filename[filename].get("category", "Nature")
 
         max_sort += 1
+        if remote_mode:
+            image_src = f"{r2_public_url}/images/{filename}"
+            thumb_url = f"{r2_public_url}/thumbs/{img_id}.jpg"
+        else:
+            image_src = f"bundled:images/{filename}"
+            thumb_url = f"{pages_base}/thumbs/{img_id}.jpg"
         entry = {
             "id": img_id,
             "name": pretty_name,
             "category": category,
             "type": "image",
-            "image_source": f"bundled:images/{filename}",
-            "thumbnail_url": f"{pages_base}/thumbs/{img_id}.jpg",
+            "image_source": image_src,
+            "thumbnail_url": thumb_url,
             "is_premium": False,
             "sort_order": max_sort,
         }
         catalog["wallpapers"].append(entry)
         added += 1
-        print(f"  Added image: {img_id} ({category})")
+        mode_label = "remote" if remote_mode else "bundled"
+        print(f"  Added image: {img_id} ({category}) [{mode_label}]")
 
 with open(catalog_path, "w") as f:
     json.dump(catalog, f, indent=2)

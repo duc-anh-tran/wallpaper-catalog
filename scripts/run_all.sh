@@ -1,40 +1,76 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Add this near the top of run_all.sh, before it calls the Python script:
-if [ -f .env ]; then
-    export $(cat .env | grep -v '^#' | xargs)
-fi
-
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(dirname "$SCRIPT_DIR")"
 
-echo "============================================"
-echo "  Wallpaper Catalog — Full Pipeline"
-echo "============================================"
+if [ -f "$REPO_ROOT/.env" ]; then
+    export $(cat "$REPO_ROOT/.env" | grep -v '^#' | xargs)
+fi
+
+REMOTE_MODE=false
+for arg in "$@"; do
+    [ "$arg" = "--remote" ] && REMOTE_MODE=true
+done
+
+if [ "$REMOTE_MODE" = true ]; then
+    echo "============================================"
+    echo "  Wallpaper Catalog — Remote Pipeline (R2)"
+    echo "============================================"
+
+    echo ""
+    echo "Step 1/4: Downloading from Pixabay..."
+    echo "--------------------------------------------"
+    python3 "$SCRIPT_DIR/download_from_pixabay.py"
+
+    echo ""
+    echo "Step 2/4: Compressing videos..."
+    echo "--------------------------------------------"
+    bash "$SCRIPT_DIR/compress_videos.sh"
+
+    echo ""
+    echo "Step 3/4: Generating thumbnails & catalog (remote)..."
+    echo "--------------------------------------------"
+    bash "$SCRIPT_DIR/generate_catalog.sh" --remote
+
+    echo ""
+    echo "Step 4/4: Uploading to Cloudflare R2..."
+    echo "--------------------------------------------"
+    bash "$SCRIPT_DIR/upload_to_r2.sh"
+else
+    echo "============================================"
+    echo "  Wallpaper Catalog — Bundled Pipeline"
+    echo "============================================"
+
+    echo ""
+    echo "Step 1/4: Downloading from Pixabay..."
+    echo "--------------------------------------------"
+    python3 "$SCRIPT_DIR/download_from_pixabay.py"
+
+    echo ""
+    echo "Step 2/4: Compressing videos..."
+    echo "--------------------------------------------"
+    bash "$SCRIPT_DIR/compress_videos.sh"
+
+    echo ""
+    echo "Step 3/4: Generating thumbnails & catalog..."
+    echo "--------------------------------------------"
+    bash "$SCRIPT_DIR/generate_catalog.sh"
+
+    echo ""
+    echo "Step 4/4: Syncing to Android app..."
+    echo "--------------------------------------------"
+    bash "$SCRIPT_DIR/sync_to_app.sh"
+fi
 
 echo ""
-echo "Step 1/3: Downloading videos from Pixabay..."
-echo "--------------------------------------------"
-python3 "$SCRIPT_DIR/download_from_pixabay.py"
-
-echo ""
-echo "Step 2/3: Generating thumbnails & updating catalog..."
-echo "--------------------------------------------"
-bash "$SCRIPT_DIR/generate_catalog.sh"
-
-echo ""
-echo "Step 3/3: Syncing to Android app..."
-echo "--------------------------------------------"
-bash "$SCRIPT_DIR/sync_to_app.sh"
-
 echo ""
 echo "============================================"
 echo "  Pipeline complete!"
 echo "============================================"
 
 video_count=$(find "$REPO_ROOT/originals/videos" -name "*.mp4" 2>/dev/null | wc -l | tr -d ' ')
-thumb_count=$(find "$REPO_ROOT/docs/thumbs" -name "*.jpg" 2>/dev/null | wc -l | tr -d ' ')
+image_count=$(find "$REPO_ROOT/originals/images" -name "*.jpg" ! -name "_*" 2>/dev/null | wc -l | tr -d ' ')
 catalog_count=$(python3 -c "
 import json
 with open('$REPO_ROOT/docs/wallpapers.json') as f:
@@ -43,18 +79,23 @@ with open('$REPO_ROOT/docs/wallpapers.json') as f:
 
 echo ""
 echo "  Videos:     $video_count"
-echo "  Thumbnails: $thumb_count"
+echo "  Images:     $image_count"
 echo "  Catalog:    $catalog_count wallpapers"
+if [ "$REMOTE_MODE" = true ]; then
+    echo "  Mode:       remote (Cloudflare R2)"
+else
+    echo "  Mode:       bundled (APK assets)"
+fi
 echo ""
 
-read -rp "Push to GitHub? (y/n): " answer
+read -rp "Push catalog to GitHub? (y/n): " answer
 if [[ "$answer" =~ ^[Yy]$ ]]; then
     echo "Pushing wallpaper-catalog..."
     cd "$REPO_ROOT"
-    git add .
-    git commit -m "update catalog"
+    git add docs/
+    git commit -m "update catalog" || echo "  Nothing to commit."
     git push
-    echo "Done! Changes pushed to GitHub."
+    echo "Done! Catalog pushed to GitHub Pages."
 else
     echo "Skipped push. You can push manually later."
 fi

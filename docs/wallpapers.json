@@ -10,56 +10,6 @@
   ],
   "wallpapers": [
     {
-      "id": "shader_rain",
-      "name": "Rainfall",
-      "category": "Nature",
-      "type": "shader",
-      "shader_effect": "rain",
-      "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/shader_rain.jpg",
-      "is_premium": false,
-      "sort_order": 1
-    },
-    {
-      "id": "shader_snow",
-      "name": "Snowfall",
-      "category": "Seasonal",
-      "type": "shader",
-      "shader_effect": "snow",
-      "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/shader_snow.jpg",
-      "is_premium": false,
-      "sort_order": 2
-    },
-    {
-      "id": "shader_firefly",
-      "name": "Fireflies",
-      "category": "Nature",
-      "type": "shader",
-      "shader_effect": "firefly",
-      "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/shader_firefly.jpg",
-      "is_premium": true,
-      "sort_order": 3
-    },
-    {
-      "id": "shader_aurora",
-      "name": "Aurora Borealis",
-      "category": "Space",
-      "type": "shader",
-      "shader_effect": "aurora",
-      "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/shader_aurora.jpg",
-      "is_premium": true,
-      "sort_order": 4
-    },
-    {
-      "id": "shader_stars",
-      "name": "Starfield",
-      "category": "Space",
-      "type": "shader",
-      "shader_effect": "stars",
-      "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/shader_stars.jpg",
-      "is_premium": false,
-      "sort_order": 5
-    },
-    {
       "id": "bridge_river_sunset",
       "name": "Bridge River Sunset",
       "category": "City",
@@ -67,7 +17,7 @@
       "video_source": "bundled:videos/bridge_river_sunset.mp4",
       "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/bridge_river_sunset.jpg",
       "is_premium": false,
-      "sort_order": 6
+      "sort_order": 1
     },
     {
       "id": "rain_raindrop_beautiful",
@@ -77,7 +27,7 @@
       "video_source": "bundled:videos/rain_raindrop_beautiful.mp4",
       "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/rain_raindrop_beautiful.jpg",
       "is_premium": false,
-      "sort_order": 7
+      "sort_order": 2
     },
     {
       "id": "rain_water_window",
@@ -87,7 +37,7 @@
       "video_source": "bundled:videos/rain_water_window.mp4",
       "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/rain_water_window.jpg",
       "is_premium": false,
-      "sort_order": 8
+      "sort_order": 3
     },
     {
       "id": "raindrop_drops_rain",
@@ -97,7 +47,7 @@
       "video_source": "bundled:videos/raindrop_drops_rain.mp4",
       "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/raindrop_drops_rain.jpg",
       "is_premium": false,
-      "sort_order": 9
+      "sort_order": 4
     },
     {
       "id": "sea_wave_golden",
@@ -107,7 +57,7 @@
       "video_source": "bundled:videos/sea_wave_golden.mp4",
       "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/sea_wave_golden.jpg",
       "is_premium": false,
-      "sort_order": 10
+      "sort_order": 5
     },
     {
       "id": "seoul_night_street",
@@ -117,7 +67,7 @@
       "video_source": "bundled:videos/seoul_night_street.mp4",
       "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/seoul_night_street.jpg",
       "is_premium": false,
-      "sort_order": 11
+      "sort_order": 6
     },
     {
       "id": "skyline_traffic_night",
@@ -127,7 +77,7 @@
       "video_source": "bundled:videos/skyline_traffic_night.mp4",
       "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/skyline_traffic_night.jpg",
       "is_premium": false,
-      "sort_order": 12
+      "sort_order": 7
     },
     {
       "id": "wave_breaking_sea",
@@ -137,7 +87,7 @@
       "video_source": "bundled:videos/wave_breaking_sea.mp4",
       "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/wave_breaking_sea.jpg",
       "is_premium": false,
-      "sort_order": 13
+      "sort_order": 8
     },
     {
       "id": "wave_lighthouse_ocean",
@@ -147,7 +97,7 @@
       "video_source": "bundled:videos/wave_lighthouse_ocean.mp4",
       "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/wave_lighthouse_ocean.jpg",
       "is_premium": false,
-      "sort_order": 14
+      "sort_order": 9
     },
     {
       "id": "japan_street_night",
@@ -157,7 +107,7 @@
       "video_source": "bundled:videos/japan_street_night.mp4",
       "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/japan_street_night.jpg",
       "is_premium": false,
-      "sort_order": 15
+      "sort_order": 10
     },
     {
       "id": "rain_rain_outside",
@@ -167,7 +117,7 @@
       "video_source": "bundled:videos/rain_rain_outside.mp4",
       "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/rain_rain_outside.jpg",
       "is_premium": false,
-      "sort_order": 16
+      "sort_order": 11
     },
     {
       "id": "aurora_borealis_northern",
@@ -177,7 +127,7 @@
       "video_source": "bundled:videos/aurora_borealis_northern.mp4",
       "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/aurora_borealis_northern.jpg",
       "is_premium": false,
-      "sort_order": 17
+      "sort_order": 12
     },
     {
       "id": "cloud_sky_grey",
@@ -187,7 +137,7 @@
       "video_source": "bundled:videos/cloud_sky_grey.mp4",
       "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/cloud_sky_grey.jpg",
       "is_premium": false,
-      "sort_order": 18
+      "sort_order": 13
     },
     {
       "id": "cloud_sky_grey_2",
@@ -197,7 +147,7 @@
       "video_source": "bundled:videos/cloud_sky_grey_2.mp4",
       "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/cloud_sky_grey_2.jpg",
       "is_premium": false,
-      "sort_order": 19
+      "sort_order": 14
     },
     {
       "id": "colours_pattern_texture",
@@ -207,7 +157,7 @@
       "video_source": "bundled:videos/colours_pattern_texture.mp4",
       "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/colours_pattern_texture.jpg",
       "is_premium": false,
-      "sort_order": 20
+      "sort_order": 15
     },
     {
       "id": "fire_burn_flame",
@@ -217,7 +167,7 @@
       "video_source": "bundled:videos/fire_burn_flame.mp4",
       "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/fire_burn_flame.jpg",
       "is_premium": false,
-      "sort_order": 21
+      "sort_order": 16
     },
     {
       "id": "fireplace_winter_christmas",
@@ -227,7 +177,7 @@
       "video_source": "bundled:videos/fireplace_winter_christmas.mp4",
       "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/fireplace_winter_christmas.jpg",
       "is_premium": false,
-      "sort_order": 22
+      "sort_order": 17
     },
     {
       "id": "forest_trees_sunlight",
@@ -237,7 +187,7 @@
       "video_source": "bundled:videos/forest_trees_sunlight.mp4",
       "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/forest_trees_sunlight.jpg",
       "is_premium": false,
-      "sort_order": 23
+      "sort_order": 18
     },
     {
       "id": "islands_ocean_sunrise",
@@ -247,7 +197,7 @@
       "video_source": "bundled:videos/islands_ocean_sunrise.mp4",
       "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/islands_ocean_sunrise.jpg",
       "is_premium": false,
-      "sort_order": 24
+      "sort_order": 19
     },
     {
       "id": "jellyfish_sea_dangerous",
@@ -257,7 +207,7 @@
       "video_source": "bundled:videos/jellyfish_sea_dangerous.mp4",
       "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/jellyfish_sea_dangerous.jpg",
       "is_premium": false,
-      "sort_order": 25
+      "sort_order": 20
     },
     {
       "id": "mountains_fog_clouds",
@@ -267,7 +217,7 @@
       "video_source": "bundled:videos/mountains_fog_clouds.mp4",
       "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/mountains_fog_clouds.jpg",
       "is_premium": false,
-      "sort_order": 26
+      "sort_order": 21
     },
     {
       "id": "ocean_beach_sunset",
@@ -277,7 +227,7 @@
       "video_source": "bundled:videos/ocean_beach_sunset.mp4",
       "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/ocean_beach_sunset.jpg",
       "is_premium": false,
-      "sort_order": 27
+      "sort_order": 22
     },
     {
       "id": "octagon_abstract_lights",
@@ -287,7 +237,7 @@
       "video_source": "bundled:videos/octagon_abstract_lights.mp4",
       "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/octagon_abstract_lights.jpg",
       "is_premium": false,
-      "sort_order": 28
+      "sort_order": 23
     },
     {
       "id": "pine_forest_snow",
@@ -297,7 +247,7 @@
       "video_source": "bundled:videos/pine_forest_snow.mp4",
       "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/pine_forest_snow.jpg",
       "is_premium": false,
-      "sort_order": 29
+      "sort_order": 24
     },
     {
       "id": "planet_earth_world",
@@ -307,7 +257,7 @@
       "video_source": "bundled:videos/planet_earth_world.mp4",
       "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/planet_earth_world.jpg",
       "is_premium": false,
-      "sort_order": 30
+      "sort_order": 25
     },
     {
       "id": "sunset_canal_city",
@@ -317,7 +267,7 @@
       "video_source": "bundled:videos/sunset_canal_city.mp4",
       "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/sunset_canal_city.jpg",
       "is_premium": false,
-      "sort_order": 31
+      "sort_order": 26
     },
     {
       "id": "traffic_city_traffic",
@@ -327,7 +277,7 @@
       "video_source": "bundled:videos/traffic_city_traffic.mp4",
       "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/traffic_city_traffic.jpg",
       "is_premium": false,
-      "sort_order": 32
+      "sort_order": 27
     },
     {
       "id": "underwater_sea_ocean",
@@ -337,7 +287,7 @@
       "video_source": "bundled:videos/underwater_sea_ocean.mp4",
       "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/underwater_sea_ocean.jpg",
       "is_premium": false,
-      "sort_order": 33
+      "sort_order": 28
     },
     {
       "id": "universe_jar_colourful",
@@ -347,7 +297,7 @@
       "video_source": "bundled:videos/universe_jar_colourful.mp4",
       "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/universe_jar_colourful.jpg",
       "is_premium": false,
-      "sort_order": 34
+      "sort_order": 29
     },
     {
       "id": "universe_stars_galaxy",
@@ -357,7 +307,7 @@
       "video_source": "bundled:videos/universe_stars_galaxy.mp4",
       "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/universe_stars_galaxy.jpg",
       "is_premium": false,
-      "sort_order": 35
+      "sort_order": 30
     },
     {
       "id": "waterfall_mountain_stream",
@@ -367,7 +317,7 @@
       "video_source": "bundled:videos/waterfall_mountain_stream.mp4",
       "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/waterfall_mountain_stream.jpg",
       "is_premium": false,
-      "sort_order": 36
+      "sort_order": 31
     },
     {
       "id": "waterfall_rainbow_river",
@@ -377,7 +327,7 @@
       "video_source": "bundled:videos/waterfall_rainbow_river.mp4",
       "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/waterfall_rainbow_river.jpg",
       "is_premium": false,
-      "sort_order": 37
+      "sort_order": 32
     },
     {
       "id": "winter_snow_people",
@@ -387,7 +337,307 @@
       "video_source": "bundled:videos/winter_snow_people.mp4",
       "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/winter_snow_people.jpg",
       "is_premium": false,
+      "sort_order": 33
+    },
+    {
+      "id": "background_beautiful_wallpaper",
+      "name": "Background Beautiful Wallpaper",
+      "category": "Abstract",
+      "type": "video",
+      "video_source": "bundled:videos/background_beautiful_wallpaper.mp4",
+      "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/background_beautiful_wallpaper.jpg",
+      "is_premium": false,
+      "sort_order": 34
+    },
+    {
+      "id": "octagon_abstract_beautiful",
+      "name": "Octagon Abstract Beautiful",
+      "category": "Abstract",
+      "type": "video",
+      "video_source": "bundled:videos/octagon_abstract_beautiful.mp4",
+      "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/octagon_abstract_beautiful.jpg",
+      "is_premium": false,
+      "sort_order": 35
+    },
+    {
+      "id": "rain_beautiful_wallpaper",
+      "name": "Rain Beautiful Wallpaper",
+      "category": "Nature",
+      "type": "video",
+      "video_source": "bundled:videos/rain_beautiful_wallpaper.mp4",
+      "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/rain_beautiful_wallpaper.jpg",
+      "is_premium": false,
+      "sort_order": 36
+    },
+    {
+      "id": "allgu_alps_alpine",
+      "name": "Allgu Alps Alpine",
+      "category": "Nature",
+      "type": "image",
+      "image_source": "bundled:images/allgu_alps_alpine.jpg",
+      "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/allgu_alps_alpine.jpg",
+      "is_premium": false,
+      "sort_order": 37
+    },
+    {
+      "id": "alps_fall_landscape",
+      "name": "Alps Fall Landscape",
+      "category": "Nature",
+      "type": "image",
+      "image_source": "bundled:images/alps_fall_landscape.jpg",
+      "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/alps_fall_landscape.jpg",
+      "is_premium": false,
       "sort_order": 38
+    },
+    {
+      "id": "astronomy_astrophotgraphy_astrophotography",
+      "name": "Astronomy Astrophotgraphy Astrophotography",
+      "category": "Space",
+      "type": "image",
+      "image_source": "bundled:images/astronomy_astrophotgraphy_astrophotography.jpg",
+      "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/astronomy_astrophotgraphy_astrophotography.jpg",
+      "is_premium": false,
+      "sort_order": 39
+    },
+    {
+      "id": "aurora_northern_lights",
+      "name": "Aurora Northern Lights",
+      "category": "Space",
+      "type": "image",
+      "image_source": "bundled:images/aurora_northern_lights.jpg",
+      "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/aurora_northern_lights.jpg",
+      "is_premium": false,
+      "sort_order": 40
+    },
+    {
+      "id": "beach_palm_trees",
+      "name": "Beach Palm Trees",
+      "category": "Nature",
+      "type": "image",
+      "image_source": "bundled:images/beach_palm_trees.jpg",
+      "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/beach_palm_trees.jpg",
+      "is_premium": false,
+      "sort_order": 41
+    },
+    {
+      "id": "bokeh_lights_nature",
+      "name": "Bokeh Lights Nature",
+      "category": "City",
+      "type": "image",
+      "image_source": "bundled:images/bokeh_lights_nature.jpg",
+      "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/bokeh_lights_nature.jpg",
+      "is_premium": false,
+      "sort_order": 42
+    },
+    {
+      "id": "canvas_spider_insect",
+      "name": "Canvas Spider Insect",
+      "category": "Nature",
+      "type": "image",
+      "image_source": "bundled:images/canvas_spider_insect.jpg",
+      "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/canvas_spider_insect.jpg",
+      "is_premium": false,
+      "sort_order": 43
+    },
+    {
+      "id": "city_night_samsung",
+      "name": "City Night Samsung",
+      "category": "City",
+      "type": "image",
+      "image_source": "bundled:images/city_night_samsung.jpg",
+      "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/city_night_samsung.jpg",
+      "is_premium": false,
+      "sort_order": 44
+    },
+    {
+      "id": "color_firework_night",
+      "name": "Color Firework Night",
+      "category": "City",
+      "type": "image",
+      "image_source": "bundled:images/color_firework_night.jpg",
+      "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/color_firework_night.jpg",
+      "is_premium": false,
+      "sort_order": 45
+    },
+    {
+      "id": "dalmatian_dog_park",
+      "name": "Dalmatian Dog Park",
+      "category": "Seasonal",
+      "type": "image",
+      "image_source": "bundled:images/dalmatian_dog_park.jpg",
+      "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/dalmatian_dog_park.jpg",
+      "is_premium": false,
+      "sort_order": 46
+    },
+    {
+      "id": "floral_flower_wallpaper",
+      "name": "Floral Flower Wallpaper",
+      "category": "Abstract",
+      "type": "image",
+      "image_source": "bundled:images/floral_flower_wallpaper.jpg",
+      "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/floral_flower_wallpaper.jpg",
+      "is_premium": false,
+      "sort_order": 47
+    },
+    {
+      "id": "graffiti_street_art",
+      "name": "Graffiti Street Art",
+      "category": "Abstract",
+      "type": "image",
+      "image_source": "bundled:images/graffiti_street_art.jpg",
+      "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/graffiti_street_art.jpg",
+      "is_premium": false,
+      "sort_order": 48
+    },
+    {
+      "id": "italy_karersee_lago",
+      "name": "Italy Karersee Lago",
+      "category": "Nature",
+      "type": "image",
+      "image_source": "bundled:images/italy_karersee_lago.jpg",
+      "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/italy_karersee_lago.jpg",
+      "is_premium": false,
+      "sort_order": 49
+    },
+    {
+      "id": "man_running_silhouette",
+      "name": "Man Running Silhouette",
+      "category": "Space",
+      "type": "image",
+      "image_source": "bundled:images/man_running_silhouette.jpg",
+      "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/man_running_silhouette.jpg",
+      "is_premium": false,
+      "sort_order": 50
+    },
+    {
+      "id": "messier_17_nebula",
+      "name": "Messier 17 Nebula",
+      "category": "Space",
+      "type": "image",
+      "image_source": "bundled:images/messier_17_nebula.jpg",
+      "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/messier_17_nebula.jpg",
+      "is_premium": false,
+      "sort_order": 51
+    },
+    {
+      "id": "milky_way_galaxy",
+      "name": "Milky Way Galaxy",
+      "category": "Space",
+      "type": "image",
+      "image_source": "bundled:images/milky_way_galaxy.jpg",
+      "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/milky_way_galaxy.jpg",
+      "is_premium": false,
+      "sort_order": 52
+    },
+    {
+      "id": "milky_way_night",
+      "name": "Milky Way Night",
+      "category": "Space",
+      "type": "image",
+      "image_source": "bundled:images/milky_way_night.jpg",
+      "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/milky_way_night.jpg",
+      "is_premium": false,
+      "sort_order": 53
+    },
+    {
+      "id": "ocean_teriberka_nature",
+      "name": "Ocean Teriberka Nature",
+      "category": "Nature",
+      "type": "image",
+      "image_source": "bundled:images/ocean_teriberka_nature.jpg",
+      "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/ocean_teriberka_nature.jpg",
+      "is_premium": false,
+      "sort_order": 54
+    },
+    {
+      "id": "pond_forest_nature",
+      "name": "Pond Forest Nature",
+      "category": "Nature",
+      "type": "image",
+      "image_source": "bundled:images/pond_forest_nature.jpg",
+      "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/pond_forest_nature.jpg",
+      "is_premium": false,
+      "sort_order": 55
+    },
+    {
+      "id": "snow_leaves_fall",
+      "name": "Snow Leaves Fall",
+      "category": "Seasonal",
+      "type": "image",
+      "image_source": "bundled:images/snow_leaves_fall.jpg",
+      "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/snow_leaves_fall.jpg",
+      "is_premium": false,
+      "sort_order": 56
+    },
+    {
+      "id": "street_city_japan",
+      "name": "Street City Japan",
+      "category": "City",
+      "type": "image",
+      "image_source": "bundled:images/street_city_japan.jpg",
+      "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/street_city_japan.jpg",
+      "is_premium": false,
+      "sort_order": 57
+    },
+    {
+      "id": "sun_sky_sunset",
+      "name": "Sun Sky Sunset",
+      "category": "Nature",
+      "type": "image",
+      "image_source": "bundled:images/sun_sky_sunset.jpg",
+      "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/sun_sky_sunset.jpg",
+      "is_premium": false,
+      "sort_order": 58
+    },
+    {
+      "id": "sunset_sunrise_sunlight",
+      "name": "Sunset Sunrise Sunlight",
+      "category": "Nature",
+      "type": "image",
+      "image_source": "bundled:images/sunset_sunrise_sunlight.jpg",
+      "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/sunset_sunrise_sunlight.jpg",
+      "is_premium": false,
+      "sort_order": 59
+    },
+    {
+      "id": "tram_nature_snow",
+      "name": "Tram Nature Snow",
+      "category": "Seasonal",
+      "type": "image",
+      "image_source": "bundled:images/tram_nature_snow.jpg",
+      "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/tram_nature_snow.jpg",
+      "is_premium": false,
+      "sort_order": 60
+    },
+    {
+      "id": "tree_flower_background",
+      "name": "Tree Flower Background",
+      "category": "Seasonal",
+      "type": "image",
+      "image_source": "bundled:images/tree_flower_background.jpg",
+      "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/tree_flower_background.jpg",
+      "is_premium": false,
+      "sort_order": 61
+    },
+    {
+      "id": "watercolor_samsung_wallpaper",
+      "name": "Watercolor Samsung Wallpaper",
+      "category": "Abstract",
+      "type": "image",
+      "image_source": "bundled:images/watercolor_samsung_wallpaper.jpg",
+      "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/watercolor_samsung_wallpaper.jpg",
+      "is_premium": false,
+      "sort_order": 62
+    },
+    {
+      "id": "woman_model_silhouette",
+      "name": "Woman Model Silhouette",
+      "category": "City",
+      "type": "image",
+      "image_source": "bundled:images/woman_model_silhouette.jpg",
+      "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/woman_model_silhouette.jpg",
+      "is_premium": false,
+      "sort_order": 63
     }
   ]
 }

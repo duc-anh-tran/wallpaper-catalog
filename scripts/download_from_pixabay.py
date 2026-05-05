@@ -28,17 +28,20 @@ VIDEO_SEARCH_QUERIES = [
 
 IMAGE_SEARCH_QUERIES = [
     {"query": "mountain landscape", "category": "Nature", "count": 3},
-    {"query": "night city", "category": "City", "count": 3},
+    {"query": "night city", "category": "City", "count": 5},
     {"query": "aurora borealis", "category": "Space", "count": 2},
-    {"query": "galaxy stars", "category": "Space", "count": 2},
-    {"query": "abstract colorful", "category": "Abstract", "count": 3},
+    {"query": "galaxy stars", "category": "Space", "count": 5},
+    {"query": "abstract colorful", "category": "Abstract", "count": 5},
     {"query": "ocean beach", "category": "Nature", "count": 2},
     {"query": "forest rain", "category": "Nature", "count": 2},
     {"query": "cherry blossom", "category": "Seasonal", "count": 2},
     {"query": "snow winter", "category": "Seasonal", "count": 2},
     {"query": "nebula space", "category": "Space", "count": 2},
     {"query": "sunset clouds", "category": "Nature", "count": 2},
-    {"query": "neon lights", "category": "City", "count": 2},
+    {"query": "summer", "category": "Nature", "count": 5},
+    {"query": "neon lights", "category": "City", "count": 5},
+    {"query": "pet", "category": "Pet", "count": 5},
+    {"query": "sunset", "category": "Nature", "count": 5},
 ]
 
 PIXABAY_VIDEOS_URL = "https://pixabay.com/api/videos/"

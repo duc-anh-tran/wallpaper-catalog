@@ -6,7 +6,8 @@
     "City",
     "Space",
     "Abstract",
-    "Seasonal"
+    "Seasonal",
+    "Pet"
   ],
   "wallpapers": [
     {
@@ -638,6 +639,246 @@
       "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/woman_model_silhouette.jpg",
       "is_premium": false,
       "sort_order": 63
+    },
+    {
+      "id": "cat_kitten_feline",
+      "name": "Cat Kitten Feline",
+      "category": "Pet",
+      "type": "image",
+      "image_source": "bundled:images/cat_kitten_feline.jpg",
+      "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/cat_kitten_feline.jpg",
+      "is_premium": false,
+      "sort_order": 64
+    },
+    {
+      "id": "cat_nature_sleepy",
+      "name": "Cat Nature Sleepy",
+      "category": "Pet",
+      "type": "image",
+      "image_source": "bundled:images/cat_nature_sleepy.jpg",
+      "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/cat_nature_sleepy.jpg",
+      "is_premium": false,
+      "sort_order": 65
+    },
+    {
+      "id": "cat_pet_animal",
+      "name": "Cat Pet Animal",
+      "category": "Pet",
+      "type": "image",
+      "image_source": "bundled:images/cat_pet_animal.jpg",
+      "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/cat_pet_animal.jpg",
+      "is_premium": false,
+      "sort_order": 66
+    },
+    {
+      "id": "caterpillar_dovetail_butterfly",
+      "name": "Caterpillar Dovetail Butterfly",
+      "category": "Nature",
+      "type": "image",
+      "image_source": "bundled:images/caterpillar_dovetail_butterfly.jpg",
+      "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/caterpillar_dovetail_butterfly.jpg",
+      "is_premium": false,
+      "sort_order": 67
+    },
+    {
+      "id": "city_night_birds",
+      "name": "City Night Birds",
+      "category": "City",
+      "type": "image",
+      "image_source": "bundled:images/city_night_birds.jpg",
+      "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/city_night_birds.jpg",
+      "is_premium": false,
+      "sort_order": 68
+    },
+    {
+      "id": "clouds_sky_sunset",
+      "name": "Clouds Sky Sunset",
+      "category": "Nature",
+      "type": "image",
+      "image_source": "bundled:images/clouds_sky_sunset.jpg",
+      "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/clouds_sky_sunset.jpg",
+      "is_premium": false,
+      "sort_order": 69
+    },
+    {
+      "id": "dog_husky_field",
+      "name": "Dog Husky Field",
+      "category": "Nature",
+      "type": "image",
+      "image_source": "bundled:images/dog_husky_field.jpg",
+      "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/dog_husky_field.jpg",
+      "is_premium": false,
+      "sort_order": 70
+    },
+    {
+      "id": "dog_pet_husky",
+      "name": "Dog Pet Husky",
+      "category": "Pet",
+      "type": "image",
+      "image_source": "bundled:images/dog_pet_husky.jpg",
+      "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/dog_pet_husky.jpg",
+      "is_premium": false,
+      "sort_order": 71
+    },
+    {
+      "id": "girl_neon_lights",
+      "name": "Girl Neon Lights",
+      "category": "City",
+      "type": "image",
+      "image_source": "bundled:images/girl_neon_lights.jpg",
+      "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/girl_neon_lights.jpg",
+      "is_premium": false,
+      "sort_order": 72
+    },
+    {
+      "id": "girl_sunset_sunset",
+      "name": "Girl Sunset Sunset",
+      "category": "Nature",
+      "type": "image",
+      "image_source": "bundled:images/girl_sunset_sunset.jpg",
+      "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/girl_sunset_sunset.jpg",
+      "is_premium": false,
+      "sort_order": 73
+    },
+    {
+      "id": "grasses_meadow_nature",
+      "name": "Grasses Meadow Nature",
+      "category": "Nature",
+      "type": "image",
+      "image_source": "bundled:images/grasses_meadow_nature.jpg",
+      "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/grasses_meadow_nature.jpg",
+      "is_premium": false,
+      "sort_order": 74
+    },
+    {
+      "id": "hills_winter_sunset",
+      "name": "Hills Winter Sunset",
+      "category": "Nature",
+      "type": "image",
+      "image_source": "bundled:images/hills_winter_sunset.jpg",
+      "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/hills_winter_sunset.jpg",
+      "is_premium": false,
+      "sort_order": 75
+    },
+    {
+      "id": "jaya_nirma_santoor",
+      "name": "Jaya Nirma Santoor",
+      "category": "Abstract",
+      "type": "image",
+      "image_source": "bundled:images/jaya_nirma_santoor.jpg",
+      "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/jaya_nirma_santoor.jpg",
+      "is_premium": false,
+      "sort_order": 76
+    },
+    {
+      "id": "lilies_flowers_plant",
+      "name": "Lilies Flowers Plant",
+      "category": "Nature",
+      "type": "image",
+      "image_source": "bundled:images/lilies_flowers_plant.jpg",
+      "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/lilies_flowers_plant.jpg",
+      "is_premium": false,
+      "sort_order": 77
+    },
+    {
+      "id": "lion_nature_animal",
+      "name": "Lion Nature Animal",
+      "category": "Pet",
+      "type": "image",
+      "image_source": "bundled:images/lion_nature_animal.jpg",
+      "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/lion_nature_animal.jpg",
+      "is_premium": false,
+      "sort_order": 78
+    },
+    {
+      "id": "milky_way_starry",
+      "name": "Milky Way Starry",
+      "category": "Space",
+      "type": "image",
+      "image_source": "bundled:images/milky_way_starry.jpg",
+      "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/milky_way_starry.jpg",
+      "is_premium": false,
+      "sort_order": 79
+    },
+    {
+      "id": "nature_sky_clouds",
+      "name": "Nature Sky Clouds",
+      "category": "Nature",
+      "type": "image",
+      "image_source": "bundled:images/nature_sky_clouds.jpg",
+      "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/nature_sky_clouds.jpg",
+      "is_premium": false,
+      "sort_order": 80
+    },
+    {
+      "id": "neon_light_neon",
+      "name": "Neon Light Neon",
+      "category": "City",
+      "type": "image",
+      "image_source": "bundled:images/neon_light_neon.jpg",
+      "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/neon_light_neon.jpg",
+      "is_premium": false,
+      "sort_order": 81
+    },
+    {
+      "id": "night_sky_mountains",
+      "name": "Night Sky Mountains",
+      "category": "Space",
+      "type": "image",
+      "image_source": "bundled:images/night_sky_mountains.jpg",
+      "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/night_sky_mountains.jpg",
+      "is_premium": false,
+      "sort_order": 82
+    },
+    {
+      "id": "paris_montmartre_france",
+      "name": "Paris Montmartre France",
+      "category": "City",
+      "type": "image",
+      "image_source": "bundled:images/paris_montmartre_france.jpg",
+      "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/paris_montmartre_france.jpg",
+      "is_premium": false,
+      "sort_order": 83
+    },
+    {
+      "id": "sign_neon_sign",
+      "name": "Sign Neon Sign",
+      "category": "City",
+      "type": "image",
+      "image_source": "bundled:images/sign_neon_sign.jpg",
+      "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/sign_neon_sign.jpg",
+      "is_premium": false,
+      "sort_order": 84
+    },
+    {
+      "id": "trees_forest_sunset",
+      "name": "Trees Forest Sunset",
+      "category": "Nature",
+      "type": "image",
+      "image_source": "bundled:images/trees_forest_sunset.jpg",
+      "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/trees_forest_sunset.jpg",
+      "is_premium": false,
+      "sort_order": 85
+    },
+    {
+      "id": "woman_nature_braid",
+      "name": "Woman Nature Braid",
+      "category": "Nature",
+      "type": "image",
+      "image_source": "bundled:images/woman_nature_braid.jpg",
+      "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/woman_nature_braid.jpg",
+      "is_premium": false,
+      "sort_order": 86
+    },
+    {
+      "id": "woman_portrait_painting",
+      "name": "Woman Portrait Painting",
+      "category": "Abstract",
+      "type": "image",
+      "image_source": "bundled:images/woman_portrait_painting.jpg",
+      "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/woman_portrait_painting.jpg",
+      "is_premium": false,
+      "sort_order": 87
     }
   ]
 }

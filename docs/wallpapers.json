@@ -1669,6 +1669,306 @@
       "thumbnail_url": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/thumbs/young_pet_cat.jpg",
       "is_premium": false,
       "sort_order": 166
+    },
+    {
+      "id": "city_new_york",
+      "name": "City New York",
+      "category": "City",
+      "type": "video",
+      "video_source": "bundled:videos/city_new_york.mp4",
+      "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/city_new_york.jpg",
+      "is_premium": false,
+      "sort_order": 167
+    },
+    {
+      "id": "rain_thunder_water",
+      "name": "Rain Thunder Water",
+      "category": "Nature",
+      "type": "video",
+      "video_source": "bundled:videos/rain_thunder_water.mp4",
+      "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/rain_thunder_water.jpg",
+      "is_premium": false,
+      "sort_order": 168
+    },
+    {
+      "id": "seoul_street_night",
+      "name": "Seoul Street Night",
+      "category": "City",
+      "type": "video",
+      "video_source": "bundled:videos/seoul_street_night.mp4",
+      "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/seoul_street_night.jpg",
+      "is_premium": false,
+      "sort_order": 169
+    },
+    {
+      "id": "shanghai_tall_buildings",
+      "name": "Shanghai Tall Buildings",
+      "category": "City",
+      "type": "video",
+      "video_source": "bundled:videos/shanghai_tall_buildings.mp4",
+      "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/shanghai_tall_buildings.jpg",
+      "is_premium": false,
+      "sort_order": 170
+    },
+    {
+      "id": "abstract_mobile_wallpaper",
+      "name": "Abstract Mobile Wallpaper",
+      "category": "Abstract",
+      "type": "image",
+      "image_source": "bundled:images/abstract_mobile_wallpaper.jpg",
+      "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/abstract_mobile_wallpaper.jpg",
+      "is_premium": false,
+      "sort_order": 171
+    },
+    {
+      "id": "airplane_airplane_window",
+      "name": "Airplane Airplane Window",
+      "category": "Space",
+      "type": "image",
+      "image_source": "bundled:images/airplane_airplane_window.jpg",
+      "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/airplane_airplane_window.jpg",
+      "is_premium": false,
+      "sort_order": 172
+    },
+    {
+      "id": "art_photographer_tourists",
+      "name": "Art Photographer Tourists",
+      "category": "Space",
+      "type": "image",
+      "image_source": "bundled:images/art_photographer_tourists.jpg",
+      "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/art_photographer_tourists.jpg",
+      "is_premium": false,
+      "sort_order": 173
+    },
+    {
+      "id": "asia_rain_street",
+      "name": "Asia Rain Street",
+      "category": "City",
+      "type": "image",
+      "image_source": "bundled:images/asia_rain_street.jpg",
+      "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/asia_rain_street.jpg",
+      "is_premium": false,
+      "sort_order": 174
+    },
+    {
+      "id": "astronaut_moon_space",
+      "name": "Astronaut Moon Space",
+      "category": "Space",
+      "type": "image",
+      "image_source": "bundled:images/astronaut_moon_space.jpg",
+      "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/astronaut_moon_space.jpg",
+      "is_premium": false,
+      "sort_order": 175
+    },
+    {
+      "id": "city_japan_travel",
+      "name": "City Japan Travel",
+      "category": "City",
+      "type": "image",
+      "image_source": "bundled:images/city_japan_travel.jpg",
+      "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/city_japan_travel.jpg",
+      "is_premium": false,
+      "sort_order": 176
+    },
+    {
+      "id": "color_water_orange",
+      "name": "Color Water Orange",
+      "category": "Abstract",
+      "type": "image",
+      "image_source": "bundled:images/color_water_orange.jpg",
+      "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/color_water_orange.jpg",
+      "is_premium": false,
+      "sort_order": 177
+    },
+    {
+      "id": "drip_water_rain",
+      "name": "Drip Water Rain",
+      "category": "Nature",
+      "type": "image",
+      "image_source": "bundled:images/drip_water_rain.jpg",
+      "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/drip_water_rain.jpg",
+      "is_premium": false,
+      "sort_order": 178
+    },
+    {
+      "id": "earth_globe_planet",
+      "name": "Earth Globe Planet",
+      "category": "Space",
+      "type": "image",
+      "image_source": "bundled:images/earth_globe_planet.jpg",
+      "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/earth_globe_planet.jpg",
+      "is_premium": false,
+      "sort_order": 179
+    },
+    {
+      "id": "flower_macro_flower",
+      "name": "Flower Macro Flower",
+      "category": "Nature",
+      "type": "image",
+      "image_source": "bundled:images/flower_macro_flower.jpg",
+      "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/flower_macro_flower.jpg",
+      "is_premium": false,
+      "sort_order": 180
+    },
+    {
+      "id": "lantern_man_culture",
+      "name": "Lantern Man Culture",
+      "category": "City",
+      "type": "image",
+      "image_source": "bundled:images/lantern_man_culture.jpg",
+      "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/lantern_man_culture.jpg",
+      "is_premium": false,
+      "sort_order": 181
+    },
+    {
+      "id": "leaves_raindrops_plants",
+      "name": "Leaves Raindrops Plants",
+      "category": "Nature",
+      "type": "image",
+      "image_source": "bundled:images/leaves_raindrops_plants.jpg",
+      "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/leaves_raindrops_plants.jpg",
+      "is_premium": false,
+      "sort_order": 182
+    },
+    {
+      "id": "milky_way_sea",
+      "name": "Milky Way Sea",
+      "category": "Space",
+      "type": "image",
+      "image_source": "bundled:images/milky_way_sea.jpg",
+      "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/milky_way_sea.jpg",
+      "is_premium": false,
+      "sort_order": 183
+    },
+    {
+      "id": "night_tokyo_street",
+      "name": "Night Tokyo Street",
+      "category": "City",
+      "type": "image",
+      "image_source": "bundled:images/night_tokyo_street.jpg",
+      "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/night_tokyo_street.jpg",
+      "is_premium": false,
+      "sort_order": 184
+    },
+    {
+      "id": "planet_mars_crater",
+      "name": "Planet Mars Crater",
+      "category": "Space",
+      "type": "image",
+      "image_source": "bundled:images/planet_mars_crater.jpg",
+      "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/planet_mars_crater.jpg",
+      "is_premium": false,
+      "sort_order": 185
+    },
+    {
+      "id": "plant_nature_design",
+      "name": "Plant Nature Design",
+      "category": "Space",
+      "type": "image",
+      "image_source": "bundled:images/plant_nature_design.jpg",
+      "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/plant_nature_design.jpg",
+      "is_premium": false,
+      "sort_order": 186
+    },
+    {
+      "id": "rain_tree_temple",
+      "name": "Rain Tree Temple",
+      "category": "Nature",
+      "type": "image",
+      "image_source": "bundled:images/rain_tree_temple.jpg",
+      "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/rain_tree_temple.jpg",
+      "is_premium": false,
+      "sort_order": 187
+    },
+    {
+      "id": "rainy_day_umbrella",
+      "name": "Rainy Day Umbrella",
+      "category": "Nature",
+      "type": "image",
+      "image_source": "bundled:images/rainy_day_umbrella.jpg",
+      "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/rainy_day_umbrella.jpg",
+      "is_premium": false,
+      "sort_order": 188
+    },
+    {
+      "id": "rocket_launch_rocket",
+      "name": "Rocket Launch Rocket",
+      "category": "Space",
+      "type": "image",
+      "image_source": "bundled:images/rocket_launch_rocket.jpg",
+      "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/rocket_launch_rocket.jpg",
+      "is_premium": false,
+      "sort_order": 189
+    },
+    {
+      "id": "sea_man_nature",
+      "name": "Sea Man Nature",
+      "category": "Nature",
+      "type": "image",
+      "image_source": "bundled:images/sea_man_nature.jpg",
+      "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/sea_man_nature.jpg",
+      "is_premium": false,
+      "sort_order": 190
+    },
+    {
+      "id": "stars_night_astrophotography",
+      "name": "Stars Night Astrophotography",
+      "category": "Space",
+      "type": "image",
+      "image_source": "bundled:images/stars_night_astrophotography.jpg",
+      "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/stars_night_astrophotography.jpg",
+      "is_premium": false,
+      "sort_order": 191
+    },
+    {
+      "id": "street_autumn_japan",
+      "name": "Street Autumn Japan",
+      "category": "City",
+      "type": "image",
+      "image_source": "bundled:images/street_autumn_japan.jpg",
+      "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/street_autumn_japan.jpg",
+      "is_premium": false,
+      "sort_order": 192
+    },
+    {
+      "id": "street_rain_traffic",
+      "name": "Street Rain Traffic",
+      "category": "Nature",
+      "type": "image",
+      "image_source": "bundled:images/street_rain_traffic.jpg",
+      "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/street_rain_traffic.jpg",
+      "is_premium": false,
+      "sort_order": 193
+    },
+    {
+      "id": "tokyo_japan_city",
+      "name": "Tokyo Japan City",
+      "category": "City",
+      "type": "image",
+      "image_source": "bundled:images/tokyo_japan_city.jpg",
+      "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/tokyo_japan_city.jpg",
+      "is_premium": false,
+      "sort_order": 194
+    },
+    {
+      "id": "tree_rain_milky",
+      "name": "Tree Rain Milky",
+      "category": "Nature",
+      "type": "image",
+      "image_source": "bundled:images/tree_rain_milky.jpg",
+      "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/tree_rain_milky.jpg",
+      "is_premium": false,
+      "sort_order": 195
+    },
+    {
+      "id": "truck_night_sky",
+      "name": "Truck Night Sky",
+      "category": "Space",
+      "type": "image",
+      "image_source": "bundled:images/truck_night_sky.jpg",
+      "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/truck_night_sky.jpg",
+      "is_premium": false,
+      "sort_order": 196
     }
   ]
 }

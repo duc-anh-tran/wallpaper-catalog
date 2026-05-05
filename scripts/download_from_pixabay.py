@@ -80,22 +80,33 @@ def download_file(url: str, dest: str):
             f.write(chunk)
 
 
-def fetch_api(api_url: str, api_key: str, query: str, count: int):
-    url = f"{api_url}?key={api_key}&q={quote(query)}&per_page={max(count, 3)}&safesearch=true"
+def fetch_api(api_url: str, api_key: str, query: str, count: int, editors_choice: bool = True):
+    ec_param = "&editors_choice=true" if editors_choice else ""
+    url = f"{api_url}?key={api_key}&q={quote(query)}&per_page={max(count, 3)}&safesearch=true{ec_param}"
     resp = requests.get(url, timeout=30)
     if resp.status_code != 200:
         print(f"  API error ({resp.status_code}): {resp.text[:200]}")
         if resp.status_code == 400 and " " in query:
             fallback = query.split()[0]
             print(f"  Retrying with \"{fallback}\"...")
-            url = f"{api_url}?key={api_key}&q={quote(fallback)}&per_page={max(count, 3)}&safesearch=true"
+            url = f"{api_url}?key={api_key}&q={quote(fallback)}&per_page={max(count, 3)}&safesearch=true{ec_param}"
             resp = requests.get(url, timeout=30)
             if resp.status_code != 200:
-                print(f"  Retry also failed ({resp.status_code}): {resp.text[:200]}")
+                print(f"  Retry failed ({resp.status_code}): {resp.text[:200]}")
                 return None
         else:
             return None
-    return resp.json()
+
+    data = resp.json()
+    if editors_choice and not data.get("hits"):
+        print(f"  No editor's choice results, retrying without filter...")
+        url = f"{api_url}?key={api_key}&q={quote(query)}&per_page={max(count, 3)}&safesearch=true"
+        resp = requests.get(url, timeout=30)
+        if resp.status_code == 200:
+            return resp.json()
+        return None
+
+    return data
 
 
 def download_videos(api_key: str):
@@ -207,7 +218,7 @@ def download_images(api_key: str):
 
         print(f"\nSearching images: \"{query}\" (category: {category}, count: {count})")
 
-        params = f"&image_type=photo&orientation=vertical&min_height=1920"
+        params = f"&image_type=photo&orientation=vertical&min_height=1920&editors_choice=true"
         url = f"{PIXABAY_IMAGES_URL}?key={api_key}&q={quote(query)}&per_page={max(count, 3)}&safesearch=true{params}"
 
         try:
@@ -229,6 +240,19 @@ def download_images(api_key: str):
                     current += count
                     continue
             data = resp.json()
+
+            if not data.get("hits"):
+                print(f"  No editor's choice results, retrying without filter...")
+                params_no_ec = f"&image_type=photo&orientation=vertical&min_height=1920"
+                url = f"{PIXABAY_IMAGES_URL}?key={api_key}&q={quote(query)}&per_page={max(count, 3)}&safesearch=true{params_no_ec}"
+                resp = requests.get(url, timeout=30)
+                if resp.status_code == 200:
+                    data = resp.json()
+                else:
+                    errors += count
+                    current += count
+                    continue
+
         except requests.RequestException as e:
             print(f"  API error for \"{query}\": {e}")
             errors += count

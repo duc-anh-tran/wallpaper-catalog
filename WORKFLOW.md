@@ -32,7 +32,7 @@ cd wallpaper-catalog
 bash scripts/run_all.sh --remote
 ```
 
-Downloads → compresses → generates catalog → uploads to R2 → optional git push.
+Downloads → compresses → generates catalog (with R2 URLs) → uploads to R2 → optional git push.
 No APK size increase. App downloads content on demand. Requires R2 setup.
 
 ## Step-by-Step (Bundled)
@@ -120,6 +120,7 @@ bash scripts/generate_catalog.sh --remote
 - Creates thumbnails locally (same as bundled)
 - Adds new entries to `docs/wallpapers.json` with R2 URLs instead of `bundled:` prefix
 - Example: `"video_source": "https://pub-xxx.r2.dev/videos/file.mp4"`
+- Only adds NEW entries — existing entries (bundled or remote) are never overwritten
 
 ### 4. Upload to Cloudflare R2
 
@@ -129,6 +130,7 @@ bash scripts/upload_to_r2.sh
 
 - Uploads compressed videos, images, and thumbnails to R2
 - Uses rclone for S3-compatible transfer
+- Syncs entire folders — safe to run multiple times
 
 ### 5. Push catalog to GitHub Pages
 
@@ -138,7 +140,49 @@ git commit -m "Add remote wallpapers"
 git push
 ```
 
-No app rebuild needed — the app fetches the updated catalog automatically (within 24 hours or on fresh launch).
+No app rebuild needed — the app fetches the updated catalog from GitHub Pages.
+
+### 6. See changes on device
+
+The app caches the catalog for **24 hours**. After pushing, users (and you) won't see new wallpapers until:
+
+- **Option A**: Wait 24 hours for the cache to expire naturally
+- **Option B**: Force-close the app AND clear its cache (Settings → Apps → Live Wallpaper → Clear Cache)
+- **Option C**: Uninstall and reinstall the app
+
+This is by design — avoids hammering the server on every app open. For development/testing, use Option B.
+
+## Important Gotchas
+
+### Cache behavior
+- The app caches `wallpapers.json` in SharedPreferences for 24 hours
+- After adding new remote wallpapers and pushing, you must clear app cache to see them immediately
+- The fallback JSON (`wallpapers_fallback.json`) in the APK is only updated when you run `sync_to_app.sh` and rebuild — it does NOT include remote-only entries unless you explicitly sync
+
+### generate_catalog.sh only adds NEW entries
+- It checks existing IDs in `wallpapers.json` and skips anything already there
+- If you want to convert a bundled entry to remote, you must manually edit `wallpapers.json`
+- If you want to re-generate an entry (e.g., change category), delete it from `wallpapers.json` first, then re-run
+
+### Scripts load .env automatically
+- All scripts (`run_all.sh`, `generate_catalog.sh`, `upload_to_r2.sh`) load `.env` from the repo root
+- You can also run them from `run_all.sh` which loads `.env` once at the top
+- The `.env` file must be in the `wallpaper-catalog/` root directory (not in `scripts/`)
+
+### rclone endpoint vs public URL
+- `R2_PUBLIC_URL` (in `.env`): the public read URL for browsers/app (e.g., `https://pub-xxxxxxxx.r2.dev`)
+- rclone endpoint (in `rclone config`): the S3 API URL for uploads (e.g., `https://<account_id>.r2.cloudflarestorage.com`)
+- These are DIFFERENT URLs — don't mix them up
+
+### Thumbnail URLs for remote entries
+- Remote entries get thumbnail URLs pointing to R2 (e.g., `https://pub-xxx.r2.dev/thumbs/file.jpg`)
+- Bundled entries keep GitHub Pages thumbnail URLs (e.g., `https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/file.jpg`)
+- Both work fine — the app loads any HTTPS thumbnail URL via Coil
+
+### APK size
+- Bundled wallpapers are in `app/src/main/assets/` and increase APK size
+- Remote wallpapers are NOT in the APK — zero size impact
+- The `wallpapers_fallback.json` includes ALL entries (bundled + remote) but that's just a small JSON file
 
 ## Cloudflare R2 Setup
 
@@ -170,8 +214,10 @@ When prompted:
 - Provider: `Cloudflare`
 - Access Key ID: (from step 2)
 - Secret Access Key: (from step 2)
-- Endpoint: `https://<account_id>.r2.cloudflarestorage.com`
+- Endpoint: `https://<account_id>.r2.cloudflarestorage.com` (NOT the pub-xxx.r2.dev URL!)
 - Leave other options as default
+
+To verify: `rclone config show r2`
 
 ### 4. Update .env
 
@@ -200,6 +246,12 @@ The catalog lives at `docs/wallpapers.json`. You can edit it directly to:
 - Mark wallpapers as premium (`"is_premium": true`)
 - Remove entries you don't want
 - Reorder categories in the `"categories"` array
+- Convert bundled entries to remote (change `bundled:videos/x.mp4` to `https://r2-url/videos/x.mp4`)
+
+After manual edits, push to GitHub Pages:
+```bash
+git add docs/wallpapers.json && git commit -m "Update catalog" && git push
+```
 
 ### Entry format — Bundled video
 
@@ -263,11 +315,16 @@ The catalog lives at `docs/wallpapers.json`. You can edit it directly to:
 
 ## How It Works in the App
 
-1. App fetches `wallpapers.json` from GitHub Pages (cached 24 hours)
-2. Falls back to bundled `wallpapers_fallback.json` if offline
-3. For bundled content (`bundled:` prefix), assets are loaded from APK instantly
-4. For remote content (HTTPS URLs), app downloads on demand and caches locally
-5. Thumbnails load from their URL (GitHub Pages or R2)
+1. App launches → fetches `wallpapers.json` from GitHub Pages
+2. If fetch succeeds → caches in SharedPreferences (24-hour TTL)
+3. If fetch fails (offline/error) → uses SharedPreferences cache, or bundled `wallpapers_fallback.json` as last resort
+4. For each wallpaper displayed:
+   - **Thumbnail**: loaded from URL (GitHub Pages or R2) via Coil image loader
+   - **Bundled video** (`bundled:` prefix): copied from APK assets to cache, played locally
+   - **Remote video** (HTTPS URL): downloaded to cache on demand, then played
+   - **Bundled image** (`bundled:` prefix): loaded from APK assets
+   - **Remote image** (HTTPS URL): downloaded to cache on demand
+5. Downloaded remote content is cached in `app_cache/wallpapers/` (500MB LRU eviction)
 6. Users can apply effects (rain, snow, fireflies, leaves, aurora) to any image wallpaper
 
 ## Adding a New Category
@@ -275,13 +332,14 @@ The catalog lives at `docs/wallpapers.json`. You can edit it directly to:
 1. Add the category name to the `"categories"` array in `docs/wallpapers.json`
 2. Use that category name in new wallpaper entries
 3. Push to GitHub Pages
+4. Clear app cache on device to see it immediately (or wait 24 hours)
 
 ## Removing Wallpapers
 
 1. Delete the entry from `docs/wallpapers.json`
 2. Optionally delete the source file from `originals/` and the thumb from `docs/thumbs/`
-3. If bundled: delete the asset from `live-wallpaper/app/src/main/assets/`
-4. If remote: optionally delete from R2 (`rclone delete r2:bucket/path/file`)
+3. If bundled: also delete the asset from `live-wallpaper/app/src/main/assets/`
+4. If remote: optionally delete from R2 (`rclone delete r2:bucket-name/path/file`)
 5. Push and rebuild (if bundled) or just push (if remote)
 
 ## Adding More Content to Existing Categories
@@ -302,3 +360,17 @@ IMAGE_SEARCH_QUERIES = [
 ```
 
 Then run the appropriate pipeline (bundled or remote).
+
+Note: The download script skips files already in `originals/` (by filename). If you increase the count for an existing query, it will only download the new ones.
+
+## Troubleshooting
+
+| Problem | Cause | Fix |
+|---------|-------|-----|
+| New wallpapers don't appear on device | 24-hour catalog cache | Clear app cache, reopen |
+| `R2_PUBLIC_URL not set` error | Script can't find `.env` | Make sure `.env` is in `wallpaper-catalog/` root |
+| rclone 401 Unauthorized | Wrong endpoint in rclone config | Use `https://<account_id>.r2.cloudflarestorage.com`, NOT the `pub-xxx.r2.dev` URL |
+| Thumbnails not loading | GitHub Pages not deployed yet | Wait 1-2 min after push for Pages to rebuild |
+| `generate_catalog.sh --remote` adds 0 entries | All files already have entries | Only NEW files get entries; delete old entries from JSON to regenerate |
+| Video won't play (remote) | R2 bucket not public | Enable public access in Cloudflare R2 settings |
+| App shows old catalog after push | SharedPreferences cache | Clear app storage or wait 24h |

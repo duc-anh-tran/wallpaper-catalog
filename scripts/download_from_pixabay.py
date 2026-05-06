@@ -189,6 +189,9 @@ def download_videos(api_key: str):
                     "category": category,
                     "tags": tags,
                     "pixabay_id": video_id,
+                    "downloads": video.get("downloads", 0),
+                    "likes": video.get("likes", 0),
+                    "views": video.get("views", 0),
                 }
                 save_metadata(metadata, VIDEO_METADATA_FILE)
                 downloaded += 1
@@ -317,6 +320,9 @@ def download_images(api_key: str):
                     "category": category,
                     "tags": tags,
                     "pixabay_id": image_id,
+                    "downloads": image.get("downloads", 0),
+                    "likes": image.get("likes", 0),
+                    "views": image.get("views", 0),
                 }
                 save_metadata(metadata, IMAGE_METADATA_FILE)
                 downloaded += 1

@@ -34,9 +34,14 @@ if [ "$BUNDLED_MODE" = true ]; then
     bash "$SCRIPT_DIR/generate_catalog.sh" --bundled
 
     echo ""
-    echo "Step 4/4: Syncing to Android app..."
+    echo "Step 4/5: Syncing to Android app..."
     echo "--------------------------------------------"
     bash "$SCRIPT_DIR/sync_to_app.sh"
+
+    echo ""
+    echo "Step 5/5: Marking premium (top 30% by popularity)..."
+    echo "--------------------------------------------"
+    python3 "$SCRIPT_DIR/mark_premium.py"
 else
     echo "============================================"
     echo "  Wallpaper Catalog — Remote Pipeline (R2)"
@@ -58,9 +63,14 @@ else
     bash "$SCRIPT_DIR/generate_catalog.sh"
 
     echo ""
-    echo "Step 4/4: Uploading to Cloudflare R2..."
+    echo "Step 4/5: Uploading to Cloudflare R2..."
     echo "--------------------------------------------"
     bash "$SCRIPT_DIR/upload_to_r2.sh"
+
+    echo ""
+    echo "Step 5/5: Marking premium (top 30% by popularity)..."
+    echo "--------------------------------------------"
+    python3 "$SCRIPT_DIR/mark_premium.py"
 fi
 
 echo ""

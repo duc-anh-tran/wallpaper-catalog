@@ -37,7 +37,7 @@
       "type": "video",
       "video_source": "bundled:videos/rain_water_window.mp4",
       "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/rain_water_window.jpg",
-      "is_premium": false,
+      "is_premium": true,
       "sort_order": 3
     },
     {
@@ -57,7 +57,7 @@
       "type": "video",
       "video_source": "bundled:videos/sea_wave_golden.mp4",
       "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/sea_wave_golden.jpg",
-      "is_premium": false,
+      "is_premium": true,
       "sort_order": 5
     },
     {
@@ -67,7 +67,7 @@
       "type": "video",
       "video_source": "bundled:videos/seoul_night_street.mp4",
       "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/seoul_night_street.jpg",
-      "is_premium": false,
+      "is_premium": true,
       "sort_order": 6
     },
     {
@@ -87,7 +87,7 @@
       "type": "video",
       "video_source": "bundled:videos/wave_breaking_sea.mp4",
       "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/wave_breaking_sea.jpg",
-      "is_premium": false,
+      "is_premium": true,
       "sort_order": 8
     },
     {
@@ -97,7 +97,7 @@
       "type": "video",
       "video_source": "bundled:videos/wave_lighthouse_ocean.mp4",
       "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/wave_lighthouse_ocean.jpg",
-      "is_premium": false,
+      "is_premium": true,
       "sort_order": 9
     },
     {
@@ -127,7 +127,7 @@
       "type": "video",
       "video_source": "bundled:videos/aurora_borealis_northern.mp4",
       "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/aurora_borealis_northern.jpg",
-      "is_premium": false,
+      "is_premium": true,
       "sort_order": 12
     },
     {
@@ -167,7 +167,7 @@
       "type": "video",
       "video_source": "bundled:videos/fire_burn_flame.mp4",
       "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/fire_burn_flame.jpg",
-      "is_premium": false,
+      "is_premium": true,
       "sort_order": 16
     },
     {
@@ -187,7 +187,7 @@
       "type": "video",
       "video_source": "bundled:videos/forest_trees_sunlight.mp4",
       "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/forest_trees_sunlight.jpg",
-      "is_premium": false,
+      "is_premium": true,
       "sort_order": 18
     },
     {
@@ -197,7 +197,7 @@
       "type": "video",
       "video_source": "bundled:videos/islands_ocean_sunrise.mp4",
       "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/islands_ocean_sunrise.jpg",
-      "is_premium": false,
+      "is_premium": true,
       "sort_order": 19
     },
     {
@@ -207,7 +207,7 @@
       "type": "video",
       "video_source": "bundled:videos/jellyfish_sea_dangerous.mp4",
       "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/jellyfish_sea_dangerous.jpg",
-      "is_premium": false,
+      "is_premium": true,
       "sort_order": 20
     },
     {
@@ -217,7 +217,7 @@
       "type": "video",
       "video_source": "bundled:videos/mountains_fog_clouds.mp4",
       "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/mountains_fog_clouds.jpg",
-      "is_premium": false,
+      "is_premium": true,
       "sort_order": 21
     },
     {
@@ -227,7 +227,7 @@
       "type": "video",
       "video_source": "bundled:videos/ocean_beach_sunset.mp4",
       "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/ocean_beach_sunset.jpg",
-      "is_premium": false,
+      "is_premium": true,
       "sort_order": 22
     },
     {
@@ -247,7 +247,7 @@
       "type": "video",
       "video_source": "bundled:videos/pine_forest_snow.mp4",
       "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/pine_forest_snow.jpg",
-      "is_premium": false,
+      "is_premium": true,
       "sort_order": 24
     },
     {
@@ -257,7 +257,7 @@
       "type": "video",
       "video_source": "bundled:videos/planet_earth_world.mp4",
       "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/planet_earth_world.jpg",
-      "is_premium": false,
+      "is_premium": true,
       "sort_order": 25
     },
     {
@@ -277,7 +277,7 @@
       "type": "video",
       "video_source": "bundled:videos/traffic_city_traffic.mp4",
       "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/traffic_city_traffic.jpg",
-      "is_premium": false,
+      "is_premium": true,
       "sort_order": 27
     },
     {
@@ -287,7 +287,7 @@
       "type": "video",
       "video_source": "bundled:videos/underwater_sea_ocean.mp4",
       "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/underwater_sea_ocean.jpg",
-      "is_premium": false,
+      "is_premium": true,
       "sort_order": 28
     },
     {
@@ -317,7 +317,7 @@
       "type": "video",
       "video_source": "bundled:videos/waterfall_mountain_stream.mp4",
       "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/waterfall_mountain_stream.jpg",
-      "is_premium": false,
+      "is_premium": true,
       "sort_order": 31
     },
     {
@@ -347,7 +347,7 @@
       "type": "video",
       "video_source": "bundled:videos/background_beautiful_wallpaper.mp4",
       "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/background_beautiful_wallpaper.jpg",
-      "is_premium": false,
+      "is_premium": true,
       "sort_order": 34
     },
     {
@@ -357,7 +357,7 @@
       "type": "video",
       "video_source": "bundled:videos/octagon_abstract_beautiful.mp4",
       "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/octagon_abstract_beautiful.jpg",
-      "is_premium": false,
+      "is_premium": true,
       "sort_order": 35
     },
     {
@@ -417,7 +417,7 @@
       "type": "image",
       "image_source": "bundled:images/beach_palm_trees.jpg",
       "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/beach_palm_trees.jpg",
-      "is_premium": false,
+      "is_premium": true,
       "sort_order": 41
     },
     {
@@ -427,7 +427,7 @@
       "type": "image",
       "image_source": "bundled:images/bokeh_lights_nature.jpg",
       "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/bokeh_lights_nature.jpg",
-      "is_premium": false,
+      "is_premium": true,
       "sort_order": 42
     },
     {
@@ -447,7 +447,7 @@
       "type": "image",
       "image_source": "bundled:images/city_night_samsung.jpg",
       "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/city_night_samsung.jpg",
-      "is_premium": false,
+      "is_premium": true,
       "sort_order": 44
     },
     {
@@ -477,7 +477,7 @@
       "type": "image",
       "image_source": "bundled:images/floral_flower_wallpaper.jpg",
       "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/floral_flower_wallpaper.jpg",
-      "is_premium": false,
+      "is_premium": true,
       "sort_order": 47
     },
     {
@@ -487,7 +487,7 @@
       "type": "image",
       "image_source": "bundled:images/graffiti_street_art.jpg",
       "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/graffiti_street_art.jpg",
-      "is_premium": false,
+      "is_premium": true,
       "sort_order": 48
     },
     {
@@ -537,7 +537,7 @@
       "type": "image",
       "image_source": "bundled:images/milky_way_night.jpg",
       "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/milky_way_night.jpg",
-      "is_premium": false,
+      "is_premium": true,
       "sort_order": 53
     },
     {
@@ -587,7 +587,7 @@
       "type": "image",
       "image_source": "bundled:images/sun_sky_sunset.jpg",
       "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/sun_sky_sunset.jpg",
-      "is_premium": false,
+      "is_premium": true,
       "sort_order": 58
     },
     {
@@ -627,7 +627,7 @@
       "type": "image",
       "image_source": "bundled:images/watercolor_samsung_wallpaper.jpg",
       "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/watercolor_samsung_wallpaper.jpg",
-      "is_premium": false,
+      "is_premium": true,
       "sort_order": 62
     },
     {
@@ -687,7 +687,7 @@
       "type": "image",
       "image_source": "bundled:images/city_night_birds.jpg",
       "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/city_night_birds.jpg",
-      "is_premium": false,
+      "is_premium": true,
       "sort_order": 68
     },
     {
@@ -757,7 +757,7 @@
       "type": "image",
       "image_source": "bundled:images/hills_winter_sunset.jpg",
       "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/hills_winter_sunset.jpg",
-      "is_premium": false,
+      "is_premium": true,
       "sort_order": 75
     },
     {
@@ -827,7 +827,7 @@
       "type": "image",
       "image_source": "bundled:images/night_sky_mountains.jpg",
       "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/night_sky_mountains.jpg",
-      "is_premium": false,
+      "is_premium": true,
       "sort_order": 82
     },
     {
@@ -887,7 +887,7 @@
       "type": "video",
       "video_source": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/videos/rain_raindrop_wet.mp4",
       "thumbnail_url": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/thumbs/rain_raindrop_wet.jpg",
-      "is_premium": false,
+      "is_premium": true,
       "sort_order": 88
     },
     {
@@ -927,7 +927,7 @@
       "type": "image",
       "image_source": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/images/art_multicoloured_to.jpg",
       "thumbnail_url": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/thumbs/art_multicoloured_to.jpg",
-      "is_premium": false,
+      "is_premium": true,
       "sort_order": 92
     },
     {
@@ -997,7 +997,7 @@
       "type": "image",
       "image_source": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/images/background_colour_template.jpg",
       "thumbnail_url": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/thumbs/background_colour_template.jpg",
-      "is_premium": false,
+      "is_premium": true,
       "sort_order": 99
     },
     {
@@ -1007,7 +1007,7 @@
       "type": "image",
       "image_source": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/images/beach_nature_phone.jpg",
       "thumbnail_url": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/thumbs/beach_nature_phone.jpg",
-      "is_premium": false,
+      "is_premium": true,
       "sort_order": 100
     },
     {
@@ -1027,7 +1027,7 @@
       "type": "image",
       "image_source": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/images/buildings_traffic_street.jpg",
       "thumbnail_url": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/thumbs/buildings_traffic_street.jpg",
-      "is_premium": false,
+      "is_premium": true,
       "sort_order": 102
     },
     {
@@ -1177,7 +1177,7 @@
       "type": "image",
       "image_source": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/images/japan_asia_neon.jpg",
       "thumbnail_url": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/thumbs/japan_asia_neon.jpg",
-      "is_premium": false,
+      "is_premium": true,
       "sort_order": 117
     },
     {
@@ -1207,7 +1207,7 @@
       "type": "image",
       "image_source": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/images/milky_way_galaxy_2.jpg",
       "thumbnail_url": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/thumbs/milky_way_galaxy_2.jpg",
-      "is_premium": false,
+      "is_premium": true,
       "sort_order": 120
     },
     {
@@ -1407,7 +1407,7 @@
       "type": "image",
       "image_source": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/images/sea_moon_sunset.jpg",
       "thumbnail_url": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/thumbs/sea_moon_sunset.jpg",
-      "is_premium": false,
+      "is_premium": true,
       "sort_order": 140
     },
     {
@@ -1497,7 +1497,7 @@
       "type": "image",
       "image_source": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/images/stars_sky_night.jpg",
       "thumbnail_url": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/thumbs/stars_sky_night.jpg",
-      "is_premium": false,
+      "is_premium": true,
       "sort_order": 149
     },
     {
@@ -1507,7 +1507,7 @@
       "type": "image",
       "image_source": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/images/street_raining_night.jpg",
       "thumbnail_url": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/thumbs/street_raining_night.jpg",
-      "is_premium": false,
+      "is_premium": true,
       "sort_order": 150
     },
     {
@@ -1517,7 +1517,7 @@
       "type": "image",
       "image_source": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/images/sunset_mountains_forest.jpg",
       "thumbnail_url": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/thumbs/sunset_mountains_forest.jpg",
-      "is_premium": false,
+      "is_premium": true,
       "sort_order": 151
     },
     {
@@ -1527,7 +1527,7 @@
       "type": "image",
       "image_source": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/images/sunset_phone_capture.jpg",
       "thumbnail_url": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/thumbs/sunset_phone_capture.jpg",
-      "is_premium": false,
+      "is_premium": true,
       "sort_order": 152
     },
     {
@@ -1597,7 +1597,7 @@
       "type": "image",
       "image_source": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/images/water_water_drop.jpg",
       "thumbnail_url": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/thumbs/water_water_drop.jpg",
-      "is_premium": false,
+      "is_premium": true,
       "sort_order": 159
     },
     {
@@ -1607,7 +1607,7 @@
       "type": "image",
       "image_source": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/images/water_waves_ocean.jpg",
       "thumbnail_url": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/thumbs/water_waves_ocean.jpg",
-      "is_premium": false,
+      "is_premium": true,
       "sort_order": 160
     },
     {
@@ -1627,7 +1627,7 @@
       "type": "image",
       "image_source": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/images/winter_forest_snow.jpg",
       "thumbnail_url": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/thumbs/winter_forest_snow.jpg",
-      "is_premium": false,
+      "is_premium": true,
       "sort_order": 162
     },
     {
@@ -1657,7 +1657,7 @@
       "type": "image",
       "image_source": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/images/woman_dress_hat.jpg",
       "thumbnail_url": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/thumbs/woman_dress_hat.jpg",
-      "is_premium": false,
+      "is_premium": true,
       "sort_order": 165
     },
     {
@@ -1687,7 +1687,7 @@
       "type": "video",
       "video_source": "bundled:videos/rain_thunder_water.mp4",
       "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/rain_thunder_water.jpg",
-      "is_premium": false,
+      "is_premium": true,
       "sort_order": 168
     },
     {
@@ -1697,7 +1697,7 @@
       "type": "video",
       "video_source": "bundled:videos/seoul_street_night.mp4",
       "thumbnail_url": "https://duc-anh-tran.github.io/wallpaper-catalog/thumbs/seoul_street_night.jpg",
-      "is_premium": false,
+      "is_premium": true,
       "sort_order": 169
     },
     {
@@ -1717,7 +1717,7 @@
       "type": "image",
       "image_source": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/images/abstract_mobile_wallpaper.jpg",
       "thumbnail_url": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/thumbs/abstract_mobile_wallpaper.jpg",
-      "is_premium": false,
+      "is_premium": true,
       "sort_order": 171
     },
     {
@@ -1747,7 +1747,7 @@
       "type": "image",
       "image_source": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/images/asia_rain_street.jpg",
       "thumbnail_url": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/thumbs/asia_rain_street.jpg",
-      "is_premium": false,
+      "is_premium": true,
       "sort_order": 174
     },
     {
@@ -1757,7 +1757,7 @@
       "type": "image",
       "image_source": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/images/astronaut_moon_space.jpg",
       "thumbnail_url": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/thumbs/astronaut_moon_space.jpg",
-      "is_premium": false,
+      "is_premium": true,
       "sort_order": 175
     },
     {
@@ -1797,7 +1797,7 @@
       "type": "image",
       "image_source": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/images/earth_globe_planet.jpg",
       "thumbnail_url": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/thumbs/earth_globe_planet.jpg",
-      "is_premium": false,
+      "is_premium": true,
       "sort_order": 179
     },
     {
@@ -1837,7 +1837,7 @@
       "type": "image",
       "image_source": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/images/milky_way_sea.jpg",
       "thumbnail_url": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/thumbs/milky_way_sea.jpg",
-      "is_premium": false,
+      "is_premium": true,
       "sort_order": 183
     },
     {
@@ -1857,7 +1857,7 @@
       "type": "image",
       "image_source": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/images/planet_mars_crater.jpg",
       "thumbnail_url": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/thumbs/planet_mars_crater.jpg",
-      "is_premium": false,
+      "is_premium": true,
       "sort_order": 185
     },
     {
@@ -1867,7 +1867,7 @@
       "type": "image",
       "image_source": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/images/plant_nature_design.jpg",
       "thumbnail_url": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/thumbs/plant_nature_design.jpg",
-      "is_premium": false,
+      "is_premium": true,
       "sort_order": 186
     },
     {
@@ -1887,7 +1887,7 @@
       "type": "image",
       "image_source": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/images/rainy_day_umbrella.jpg",
       "thumbnail_url": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/thumbs/rainy_day_umbrella.jpg",
-      "is_premium": false,
+      "is_premium": true,
       "sort_order": 188
     },
     {
@@ -1897,7 +1897,7 @@
       "type": "image",
       "image_source": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/images/rocket_launch_rocket.jpg",
       "thumbnail_url": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/thumbs/rocket_launch_rocket.jpg",
-      "is_premium": false,
+      "is_premium": true,
       "sort_order": 189
     },
     {
@@ -1957,7 +1957,7 @@
       "type": "image",
       "image_source": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/images/tree_rain_milky.jpg",
       "thumbnail_url": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/thumbs/tree_rain_milky.jpg",
-      "is_premium": false,
+      "is_premium": true,
       "sort_order": 195
     },
     {

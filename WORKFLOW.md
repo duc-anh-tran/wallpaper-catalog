@@ -24,8 +24,9 @@ All scripts are run from the `wallpaper-catalog/` directory.
 │  2. bash scripts/compress_videos.sh                                  │
 │  3. bash scripts/generate_catalog.sh                                 │
 │  4. bash scripts/upload_to_r2.sh                                     │
-│  5. git add docs/wallpapers.json && git commit -m "update" && git push│
-│  6. Clear app cache on device to see new wallpapers                  │
+│  5. python3 scripts/mark_premium.py                                  │
+│  6. git add docs/wallpapers.json && git commit -m "update" && git push│
+│  7. Clear app cache on device to see new wallpapers                  │
 └──────────────────────────────────────────────────────────────────────┘
 ```
 
@@ -37,8 +38,9 @@ All scripts are run from the `wallpaper-catalog/` directory.
 │  2. bash scripts/compress_videos.sh --lq                             │
 │  3. bash scripts/generate_catalog.sh --bundled                       │
 │  4. bash scripts/sync_to_app.sh                                      │
-│  5. git add docs/ && git commit -m "update" && git push              │
-│  6. cd ../live-wallpaper && ./gradlew assembleDebug                  │
+│  5. python3 scripts/mark_premium.py                                  │
+│  6. git add docs/ && git commit -m "update" && git push              │
+│  7. cd ../live-wallpaper && ./gradlew assembleDebug                  │
 └──────────────────────────────────────────────────────────────────────┘
 ```
 
@@ -46,8 +48,8 @@ All scripts are run from the `wallpaper-catalog/` directory.
 
 ```bash
 cd wallpaper-catalog
-bash scripts/run_all.sh              # remote pipeline — DEFAULT (steps 1-5)
-bash scripts/run_all.sh --bundled    # bundled pipeline (steps 1-5)
+bash scripts/run_all.sh              # remote pipeline — DEFAULT (steps 1-6)
+bash scripts/run_all.sh --bundled    # bundled pipeline (steps 1-6)
 ```
 
 ## Quick Start
@@ -59,7 +61,7 @@ cd wallpaper-catalog
 bash scripts/run_all.sh
 ```
 
-No APK size increase. App downloads content on demand.
+No APK size increase. App downloads content on demand. Premium is auto-assigned.
 
 ### Bundled wallpapers (packaged in APK — rare)
 
@@ -116,7 +118,19 @@ bash scripts/upload_to_r2.sh
 - Uses rclone for S3-compatible transfer
 - Syncs entire folders — safe to run multiple times
 
-### 5. Push catalog to GitHub Pages
+### 5. Mark premium wallpapers
+
+```bash
+python3 scripts/mark_premium.py
+```
+
+- Sorts all wallpapers by Pixabay download count
+- Marks the top 30% as `is_premium: true`
+- Re-runnable — recalculates every time based on full catalog
+- New wallpapers get popularity data saved during download (step 1)
+- If you have entries missing popularity data, run `python3 scripts/backfill_popularity.py` first
+
+### 6. Push catalog to GitHub Pages
 
 ```bash
 git add docs/wallpapers.json
@@ -126,7 +140,7 @@ git push
 
 No app rebuild needed — the app fetches the updated catalog from GitHub Pages.
 
-### 6. See changes on device
+### 7. See changes on device
 
 The app caches the catalog for **24 hours**. After pushing, users (and you) won't see new wallpapers until:
 
@@ -175,7 +189,15 @@ bash scripts/sync_to_app.sh
 - Copies `wallpapers.json` → `wallpapers_fallback.json` (offline fallback)
 - Only copies files with `bundled:` prefix — remote entries are skipped
 
-### 5. Push catalog & build
+### 5. Mark premium wallpapers
+
+```bash
+python3 scripts/mark_premium.py
+```
+
+- Same as remote step 5 — marks top 30% by popularity
+
+### 6. Push catalog & build
 
 ```bash
 git add docs/ && git commit -m "Update catalog" && git push
@@ -183,6 +205,28 @@ cd ../live-wallpaper && ./gradlew assembleDebug
 ```
 
 The Gradle build will fail if any `bundled:` entry is missing from assets — run `sync_to_app.sh` first.
+
+## Premium Wallpapers
+
+### How premium marking works
+- `mark_premium.py` ranks all wallpapers by Pixabay download count (most downloaded = most desirable)
+- Top 30% are marked `is_premium: true`, the rest are free
+- Run automatically as part of `run_all.sh`
+- Re-runnable — always recalculates from scratch based on current catalog + metadata
+
+### Popularity data
+- The download script (`download_from_pixabay.py`) saves `downloads`, `likes`, `views` for each new entry
+- For older entries missing this data, run `python3 scripts/backfill_popularity.py` (one-time, queries Pixabay API)
+- Entries with no popularity data score as 0 (least likely to be premium)
+
+### Overriding premium manually
+- Edit `docs/wallpapers.json` directly — set `"is_premium": true/false`
+- Note: running `mark_premium.py` again will overwrite manual changes
+- To permanently force an entry as premium/free, edit it after the last `mark_premium.py` run and don't re-run the script
+
+### Adjusting the percentage
+- Edit `PREMIUM_PERCENTAGE = 0.30` at the top of `scripts/mark_premium.py`
+- 0.30 = 30% premium, 0.20 = 20%, etc.
 
 ## Important Gotchas
 

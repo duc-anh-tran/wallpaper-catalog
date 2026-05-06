@@ -16,29 +16,29 @@ How to add new wallpapers (videos or images) to the catalog and deploy them to t
 
 All scripts are run from the `wallpaper-catalog/` directory.
 
-### Bundled pipeline (content goes into APK)
+### Remote pipeline — DEFAULT (content goes to Cloudflare R2)
 
 ```
 ┌──────────────────────────────────────────────────────────────────────┐
 │  1. python3 scripts/download_from_pixabay.py                         │
 │  2. bash scripts/compress_videos.sh                                  │
 │  3. bash scripts/generate_catalog.sh                                 │
-│  4. bash scripts/sync_to_app.sh                                      │
-│  5. git add docs/ && git commit -m "update" && git push              │
-│  6. cd ../live-wallpaper && ./gradlew assembleDebug                  │
+│  4. bash scripts/upload_to_r2.sh                                     │
+│  5. git add docs/wallpapers.json && git commit -m "update" && git push│
+│  6. Clear app cache on device to see new wallpapers                  │
 └──────────────────────────────────────────────────────────────────────┘
 ```
 
-### Remote pipeline (content goes to Cloudflare R2)
+### Bundled pipeline (content goes into APK — rare, use `--bundled`)
 
 ```
 ┌──────────────────────────────────────────────────────────────────────┐
 │  1. python3 scripts/download_from_pixabay.py                         │
-│  2. bash scripts/compress_videos.sh                                  │
-│  3. bash scripts/generate_catalog.sh --remote                        │
-│  4. bash scripts/upload_to_r2.sh                                     │
-│  5. git add docs/wallpapers.json && git commit -m "update" && git push│
-│  6. Clear app cache on device to see new wallpapers                  │
+│  2. bash scripts/compress_videos.sh --lq                             │
+│  3. bash scripts/generate_catalog.sh --bundled                       │
+│  4. bash scripts/sync_to_app.sh                                      │
+│  5. git add docs/ && git commit -m "update" && git push              │
+│  6. cd ../live-wallpaper && ./gradlew assembleDebug                  │
 └──────────────────────────────────────────────────────────────────────┘
 ```
 
@@ -46,32 +46,32 @@ All scripts are run from the `wallpaper-catalog/` directory.
 
 ```bash
 cd wallpaper-catalog
-bash scripts/run_all.sh            # bundled pipeline (steps 1-5)
-bash scripts/run_all.sh --remote   # remote pipeline (steps 1-5)
+bash scripts/run_all.sh              # remote pipeline — DEFAULT (steps 1-5)
+bash scripts/run_all.sh --bundled    # bundled pipeline (steps 1-5)
 ```
 
 ## Quick Start
 
-### Bundled wallpapers (packaged in APK)
+### Adding new wallpapers (default — remote/R2)
 
 ```bash
 cd wallpaper-catalog
 bash scripts/run_all.sh
-cd ../live-wallpaper && ./gradlew assembleDebug
 ```
 
-Increases APK size. Best for the core set of wallpapers you want available offline.
+No APK size increase. App downloads content on demand.
 
-### Remote wallpapers (hosted on Cloudflare R2)
+### Bundled wallpapers (packaged in APK — rare)
 
 ```bash
 cd wallpaper-catalog
-bash scripts/run_all.sh --remote
+bash scripts/run_all.sh --bundled
+cd ../live-wallpaper && ./gradlew assembleDebug
 ```
 
-No APK size increase. App downloads content on demand. Requires R2 setup.
+Increases APK size. Only use for wallpapers you want available offline.
 
-## Step-by-Step (Bundled)
+## Step-by-Step (Remote — Default)
 
 ### 1. Download content from Pixabay
 
@@ -90,8 +90,8 @@ python3 scripts/download_from_pixabay.py
 bash scripts/compress_videos.sh
 ```
 
-- Compresses videos to 720x1280, 15s max, CRF 28, no audio
-- Output goes to `originals/videos_compressed/`
+- HQ by default (1080x1920, CRF 23) — good for R2 streaming
+- Output goes to `originals/videos_compressed_hq/`
 - Skips already-compressed files
 
 ### 3. Generate catalog
@@ -100,61 +100,9 @@ bash scripts/compress_videos.sh
 bash scripts/generate_catalog.sh
 ```
 
+- Remote mode is the default — generates entries with R2 URLs
 - Creates thumbnails in `docs/thumbs/` (video frame extracts + scaled images)
-- Adds new entries to `docs/wallpapers.json` with `bundled:` prefix
-- Does NOT remove existing entries — only adds new ones
-
-### 4. Sync to Android app
-
-```bash
-bash scripts/sync_to_app.sh
-```
-
-- Copies compressed videos to `live-wallpaper/app/src/main/assets/videos/`
-- Copies images to `live-wallpaper/app/src/main/assets/images/`
-- Copies `wallpapers.json` → `wallpapers_fallback.json` (offline fallback)
-- Only copies files with `bundled:` prefix — remote entries are skipped
-
-### 5. Push catalog to GitHub Pages
-
-```bash
-git add docs/
-git commit -m "Update catalog"
-git push
-```
-
-The app fetches `wallpapers.json` from: https://duc-anh-tran.github.io/wallpaper-catalog/wallpapers.json
-
-### 6. Build the app
-
-```bash
-cd ../live-wallpaper
-./gradlew assembleDebug
-```
-
-## Step-by-Step (Remote / Cloudflare R2)
-
-### 1. Download content from Pixabay
-
-Same as bundled — edit search queries, run:
-```bash
-python3 scripts/download_from_pixabay.py
-```
-
-### 2. Compress videos
-
-```bash
-bash scripts/compress_videos.sh
-```
-
-### 3. Generate catalog (remote mode)
-
-```bash
-bash scripts/generate_catalog.sh --remote
-```
-
-- Creates thumbnails locally (same as bundled)
-- Adds new entries to `docs/wallpapers.json` with R2 URLs instead of `bundled:` prefix
+- Adds new entries to `docs/wallpapers.json` with R2 URLs
 - Example: `"video_source": "https://pub-xxx.r2.dev/videos/file.mp4"`
 - Only adds NEW entries — existing entries (bundled or remote) are never overwritten
 
@@ -187,6 +135,54 @@ The app caches the catalog for **24 hours**. After pushing, users (and you) won'
 - **Option C**: Uninstall and reinstall the app
 
 This is by design — avoids hammering the server on every app open. For development/testing, use Option B.
+
+## Step-by-Step (Bundled — Rare)
+
+Only use this if you want wallpapers available offline inside the APK.
+
+### 1. Download content from Pixabay
+
+```bash
+python3 scripts/download_from_pixabay.py
+```
+
+### 2. Compress videos (low quality for APK size)
+
+```bash
+bash scripts/compress_videos.sh --lq
+```
+
+- LQ mode: 720x1280, CRF 28, smaller files for APK
+- Output goes to `originals/videos_compressed/`
+
+### 3. Generate catalog (bundled mode)
+
+```bash
+bash scripts/generate_catalog.sh --bundled
+```
+
+- Adds new entries with `bundled:` prefix instead of R2 URLs
+- Creates thumbnails in `docs/thumbs/`
+
+### 4. Sync to Android app
+
+```bash
+bash scripts/sync_to_app.sh
+```
+
+- Copies compressed videos to `live-wallpaper/app/src/main/assets/videos/`
+- Copies images to `live-wallpaper/app/src/main/assets/images/`
+- Copies `wallpapers.json` → `wallpapers_fallback.json` (offline fallback)
+- Only copies files with `bundled:` prefix — remote entries are skipped
+
+### 5. Push catalog & build
+
+```bash
+git add docs/ && git commit -m "Update catalog" && git push
+cd ../live-wallpaper && ./gradlew assembleDebug
+```
+
+The Gradle build will fail if any `bundled:` entry is missing from assets — run `sync_to_app.sh` first.
 
 ## Important Gotchas
 

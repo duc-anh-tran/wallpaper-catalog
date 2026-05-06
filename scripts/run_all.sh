@@ -8,36 +8,12 @@ if [ -f "$REPO_ROOT/.env" ]; then
     export $(cat "$REPO_ROOT/.env" | grep -v '^#' | xargs)
 fi
 
-REMOTE_MODE=false
+BUNDLED_MODE=false
 for arg in "$@"; do
-    [ "$arg" = "--remote" ] && REMOTE_MODE=true
+    [ "$arg" = "--bundled" ] && BUNDLED_MODE=true
 done
 
-if [ "$REMOTE_MODE" = true ]; then
-    echo "============================================"
-    echo "  Wallpaper Catalog — Remote Pipeline (R2)"
-    echo "============================================"
-
-    echo ""
-    echo "Step 1/4: Downloading from Pixabay..."
-    echo "--------------------------------------------"
-    python3 "$SCRIPT_DIR/download_from_pixabay.py"
-
-    echo ""
-    echo "Step 2/4: Compressing videos (HQ for R2)..."
-    echo "--------------------------------------------"
-    bash "$SCRIPT_DIR/compress_videos.sh"
-
-    echo ""
-    echo "Step 3/4: Generating thumbnails & catalog (remote)..."
-    echo "--------------------------------------------"
-    bash "$SCRIPT_DIR/generate_catalog.sh" --remote
-
-    echo ""
-    echo "Step 4/4: Uploading to Cloudflare R2..."
-    echo "--------------------------------------------"
-    bash "$SCRIPT_DIR/upload_to_r2.sh"
-else
+if [ "$BUNDLED_MODE" = true ]; then
     echo "============================================"
     echo "  Wallpaper Catalog — Bundled Pipeline"
     echo "============================================"
@@ -55,12 +31,36 @@ else
     echo ""
     echo "Step 3/4: Generating thumbnails & catalog..."
     echo "--------------------------------------------"
-    bash "$SCRIPT_DIR/generate_catalog.sh"
+    bash "$SCRIPT_DIR/generate_catalog.sh" --bundled
 
     echo ""
     echo "Step 4/4: Syncing to Android app..."
     echo "--------------------------------------------"
     bash "$SCRIPT_DIR/sync_to_app.sh"
+else
+    echo "============================================"
+    echo "  Wallpaper Catalog — Remote Pipeline (R2)"
+    echo "============================================"
+
+    echo ""
+    echo "Step 1/4: Downloading from Pixabay..."
+    echo "--------------------------------------------"
+    python3 "$SCRIPT_DIR/download_from_pixabay.py"
+
+    echo ""
+    echo "Step 2/4: Compressing videos (HQ for R2)..."
+    echo "--------------------------------------------"
+    bash "$SCRIPT_DIR/compress_videos.sh"
+
+    echo ""
+    echo "Step 3/4: Generating thumbnails & catalog (remote)..."
+    echo "--------------------------------------------"
+    bash "$SCRIPT_DIR/generate_catalog.sh"
+
+    echo ""
+    echo "Step 4/4: Uploading to Cloudflare R2..."
+    echo "--------------------------------------------"
+    bash "$SCRIPT_DIR/upload_to_r2.sh"
 fi
 
 echo ""
@@ -81,10 +81,10 @@ echo ""
 echo "  Videos:     $video_count"
 echo "  Images:     $image_count"
 echo "  Catalog:    $catalog_count wallpapers"
-if [ "$REMOTE_MODE" = true ]; then
-    echo "  Mode:       remote (Cloudflare R2)"
-else
+if [ "$BUNDLED_MODE" = true ]; then
     echo "  Mode:       bundled (APK assets)"
+else
+    echo "  Mode:       remote (Cloudflare R2)"
 fi
 echo ""
 

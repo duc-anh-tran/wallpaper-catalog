@@ -17,17 +17,17 @@ IMAGE_METADATA="$IMAGES_DIR/_download_metadata.json"
 
 GITHUB_PAGES_BASE="https://duc-anh-tran.github.io/wallpaper-catalog"
 
-REMOTE_MODE=false
+REMOTE_MODE=true
 R2_PUBLIC_URL="${R2_PUBLIC_URL:-}"
 for arg in "$@"; do
-    if [ "$arg" = "--remote" ]; then
-        REMOTE_MODE=true
-        if [ -z "$R2_PUBLIC_URL" ]; then
-            echo "Error: --remote requires R2_PUBLIC_URL to be set (in .env or exported)"
-            exit 1
-        fi
-    fi
+    [ "$arg" = "--bundled" ] && REMOTE_MODE=false
 done
+
+if [ "$REMOTE_MODE" = true ] && [ -z "$R2_PUBLIC_URL" ]; then
+    echo "Error: Remote mode (default) requires R2_PUBLIC_URL to be set (in .env or exported)"
+    echo "       Use --bundled flag to generate bundled entries instead"
+    exit 1
+fi
 
 if ! command -v ffmpeg &>/dev/null; then
     echo "Error: ffmpeg is not installed."

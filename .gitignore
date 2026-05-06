@@ -1,5 +1,6 @@
 .env
 originals/videos/
 originals/videos_compressed/
+originals/videos_compressed_hq/
 originals/images/*.jpg
 originals/images/*.png

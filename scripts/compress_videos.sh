@@ -4,7 +4,23 @@ set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(dirname "$SCRIPT_DIR")"
 VIDEOS_DIR="$REPO_ROOT/originals/videos"
-COMPRESSED_DIR="$REPO_ROOT/originals/videos_compressed"
+
+LQ_MODE=false
+for arg in "$@"; do
+    [ "$arg" = "--lq" ] && LQ_MODE=true
+done
+
+if [ "$LQ_MODE" = true ]; then
+    COMPRESSED_DIR="$REPO_ROOT/originals/videos_compressed"
+    SCALE="720:1280"
+    CRF=28
+    echo "  Mode: STANDARD (720x1280, CRF 28) — for bundled/APK"
+else
+    COMPRESSED_DIR="$REPO_ROOT/originals/videos_compressed_hq"
+    SCALE="1080:1920"
+    CRF=23
+    echo "  Mode: HIGH QUALITY (1080x1920, CRF 23) — for remote/R2"
+fi
 
 if ! command -v ffmpeg &>/dev/null; then
     echo "Error: ffmpeg is not installed."
@@ -58,9 +74,9 @@ for video in "$VIDEOS_DIR"/*.mp4; do
     echo "  Compressing: $basename ($(human_size "$size_before"))..."
     ffmpeg -y -i "$video" \
         -t 15 \
-        -vf "scale=720:1280:force_original_aspect_ratio=decrease,pad=720:1280:(ow-iw)/2:(oh-ih)/2" \
+        -vf "scale=${SCALE}:force_original_aspect_ratio=decrease,pad=${SCALE}:(ow-iw)/2:(oh-ih)/2" \
         -c:v libx264 \
-        -crf 28 \
+        -crf "$CRF" \
         -preset slow \
         -an \
         -movflags +faststart \

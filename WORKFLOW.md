@@ -397,7 +397,10 @@ IMAGE_SEARCH_QUERIES = [
 
 Then run the appropriate pipeline (bundled or remote).
 
-Note: The download script skips files already in `originals/` (by filename). If you increase the count for an existing query, it will only download the new ones.
+Note: The download script skips based on **Pixabay ID in metadata**, not just file existence. This means:
+- Increasing the count for an existing query will only download new results
+- If you delete a file you don't want, it will NOT be re-downloaded (metadata remembers it)
+- To force re-download a deleted file, remove its entry from `originals/images/_download_metadata.json` or `originals/videos/_download_metadata.json`
 
 ## Troubleshooting
 
@@ -410,3 +413,4 @@ Note: The download script skips files already in `originals/` (by filename). If 
 | `generate_catalog.sh --remote` adds 0 entries | All files already have entries | Only NEW files get entries; delete old entries from JSON to regenerate |
 | Video won't play (remote) | R2 bucket not public | Enable public access in Cloudflare R2 settings |
 | App shows old catalog after push | SharedPreferences cache | Clear app storage or wait 24h |
+| Deleted file keeps getting re-downloaded | Won't happen — metadata tracks by Pixabay ID | To force re-download, delete entry from `_download_metadata.json` |

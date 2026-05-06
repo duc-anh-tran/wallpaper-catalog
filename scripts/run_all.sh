@@ -24,7 +24,7 @@ if [ "$REMOTE_MODE" = true ]; then
     python3 "$SCRIPT_DIR/download_from_pixabay.py"
 
     echo ""
-    echo "Step 2/4: Compressing videos..."
+    echo "Step 2/4: Compressing videos (HQ for R2)..."
     echo "--------------------------------------------"
     bash "$SCRIPT_DIR/compress_videos.sh"
 
@@ -48,9 +48,9 @@ else
     python3 "$SCRIPT_DIR/download_from_pixabay.py"
 
     echo ""
-    echo "Step 2/4: Compressing videos..."
+    echo "Step 2/4: Compressing videos (LQ for APK)..."
     echo "--------------------------------------------"
-    bash "$SCRIPT_DIR/compress_videos.sh"
+    bash "$SCRIPT_DIR/compress_videos.sh" --lq
 
     echo ""
     echo "Step 3/4: Generating thumbnails & catalog..."

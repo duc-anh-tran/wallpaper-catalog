@@ -145,6 +145,12 @@ def download_videos(api_key: str):
         for video in hits[:count]:
             current += 1
             video_id = video["id"]
+
+            if str(video_id) in metadata:
+                print(f"  Skipping {current}/{total_expected}: {metadata[str(video_id)]['filename']} (already processed)")
+                skipped += 1
+                continue
+
             tags = video.get("tags", f"video_{video_id}")
             name = sanitize_name(tags)
 
@@ -154,7 +160,7 @@ def download_videos(api_key: str):
             existing_names = {v["name"] for v in metadata.values()}
             original_name = name
             suffix = 2
-            while name in existing_names and str(video_id) not in metadata:
+            while name in existing_names:
                 name = f"{original_name}_{suffix}"
                 suffix += 1
 
@@ -268,6 +274,12 @@ def download_images(api_key: str):
         for image in hits[:count]:
             current += 1
             image_id = image["id"]
+
+            if str(image_id) in metadata:
+                print(f"  Skipping {current}/{total_expected}: {metadata[str(image_id)]['filename']} (already processed)")
+                skipped += 1
+                continue
+
             tags = image.get("tags", f"image_{image_id}")
             name = sanitize_name(tags)
 
@@ -277,7 +289,7 @@ def download_images(api_key: str):
             existing_names = {v["name"] for v in metadata.values()}
             original_name = name
             suffix = 2
-            while name in existing_names and str(image_id) not in metadata:
+            while name in existing_names:
                 name = f"{original_name}_{suffix}"
                 suffix += 1
 

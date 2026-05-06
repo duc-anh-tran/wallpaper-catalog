@@ -8,7 +8,15 @@ if [ -f "$REPO_ROOT/.env" ]; then
     export $(cat "$REPO_ROOT/.env" | grep -v '^#' | xargs)
 fi
 
-VIDEOS_DIR="$REPO_ROOT/originals/videos_compressed"
+HQ_DIR="$REPO_ROOT/originals/videos_compressed_hq"
+STD_DIR="$REPO_ROOT/originals/videos_compressed"
+if [ -d "$HQ_DIR" ] && [ "$(ls -A "$HQ_DIR" 2>/dev/null)" ]; then
+    VIDEOS_DIR="$HQ_DIR"
+    echo "  Using HQ videos (1080p)"
+else
+    VIDEOS_DIR="$STD_DIR"
+    echo "  Using standard videos (720p)"
+fi
 IMAGES_DIR="$REPO_ROOT/originals/images"
 THUMBS_DIR="$REPO_ROOT/docs/thumbs"
 

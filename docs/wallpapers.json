@@ -591,7 +591,7 @@
       "name": "Lion Nature Animal",
       "category": "Pet",
       "type": "image",
-      "image_source": "bundled:images/lion_nature_animal.jpg",
+      "image_source": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/images/lion_nature_animal.jpg",
       "thumbnail_url": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/thumbs/lion_nature_animal.jpg",
       "is_premium": false,
       "sort_order": 58
@@ -2041,7 +2041,7 @@
       "name": "Woman Portrait Painting",
       "category": "Abstract",
       "type": "image",
-      "image_source": "bundled:images/woman_portrait_painting.jpg",
+      "image_source": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/images/woman_portrait_painting.jpg",
       "thumbnail_url": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/thumbs/woman_portrait_painting.jpg",
       "is_premium": false,
       "sort_order": 203
@@ -2091,7 +2091,7 @@
       "name": "Octagon Abstract Lights",
       "category": "Abstract",
       "type": "video",
-      "video_source": "bundled:videos/octagon_abstract_lights.mp4",
+      "video_source": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/videos/octagon_abstract_lights.mp4",
       "thumbnail_url": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/thumbs/octagon_abstract_lights.jpg",
       "is_premium": false,
       "sort_order": 208
@@ -2181,7 +2181,7 @@
       "name": "Fire Burn Flame",
       "category": "Nature",
       "type": "video",
-      "video_source": "bundled:videos/fire_burn_flame.mp4",
+      "video_source": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/videos/fire_burn_flame.mp4",
       "thumbnail_url": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/thumbs/fire_burn_flame.jpg",
       "is_premium": true,
       "sort_order": 217
@@ -2271,7 +2271,7 @@
       "name": "Universe Stars Galaxy",
       "category": "Space",
       "type": "video",
-      "video_source": "bundled:videos/universe_stars_galaxy.mp4",
+      "video_source": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/videos/universe_stars_galaxy.mp4",
       "thumbnail_url": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/thumbs/universe_stars_galaxy.jpg",
       "is_premium": false,
       "sort_order": 226
@@ -2321,7 +2321,7 @@
       "name": "Man Running Silhouette",
       "category": "Space",
       "type": "image",
-      "image_source": "bundled:images/man_running_silhouette.jpg",
+      "image_source": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/images/man_running_silhouette.jpg",
       "thumbnail_url": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/thumbs/man_running_silhouette.jpg",
       "is_premium": false,
       "sort_order": 231
@@ -2361,7 +2361,7 @@
       "name": "Forest Trees Sunlight",
       "category": "Nature",
       "type": "video",
-      "video_source": "bundled:videos/forest_trees_sunlight.mp4",
+      "video_source": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/videos/forest_trees_sunlight.mp4",
       "thumbnail_url": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/thumbs/forest_trees_sunlight.jpg",
       "is_premium": true,
       "sort_order": 235
@@ -2391,7 +2391,7 @@
       "name": "Messier 17 Nebula",
       "category": "Space",
       "type": "image",
-      "image_source": "bundled:images/messier_17_nebula.jpg",
+      "image_source": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/images/messier_17_nebula.jpg",
       "thumbnail_url": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/thumbs/messier_17_nebula.jpg",
       "is_premium": false,
       "sort_order": 238
@@ -2451,7 +2451,7 @@
       "name": "Islands Ocean Sunrise",
       "category": "Nature",
       "type": "video",
-      "video_source": "bundled:videos/islands_ocean_sunrise.mp4",
+      "video_source": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/videos/islands_ocean_sunrise.mp4",
       "thumbnail_url": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/thumbs/islands_ocean_sunrise.jpg",
       "is_premium": true,
       "sort_order": 244
@@ -2471,7 +2471,7 @@
       "name": "Milky Way Galaxy",
       "category": "Space",
       "type": "image",
-      "image_source": "bundled:images/milky_way_galaxy.jpg",
+      "image_source": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/images/milky_way_galaxy.jpg",
       "thumbnail_url": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/thumbs/milky_way_galaxy.jpg",
       "is_premium": false,
       "sort_order": 246
@@ -2521,7 +2521,7 @@
       "name": "Milky Way Starry",
       "category": "Space",
       "type": "image",
-      "image_source": "bundled:images/milky_way_starry.jpg",
+      "image_source": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/images/milky_way_starry.jpg",
       "thumbnail_url": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/thumbs/milky_way_starry.jpg",
       "is_premium": false,
       "sort_order": 251
@@ -2541,7 +2541,7 @@
       "name": "Bridge River Sunset",
       "category": "City",
       "type": "video",
-      "video_source": "bundled:videos/bridge_river_sunset.mp4",
+      "video_source": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/videos/bridge_river_sunset.mp4",
       "thumbnail_url": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/thumbs/bridge_river_sunset.jpg",
       "is_premium": false,
       "sort_order": 253
@@ -2621,7 +2621,7 @@
       "name": "Woman Model Silhouette",
       "category": "City",
       "type": "image",
-      "image_source": "bundled:images/woman_model_silhouette.jpg",
+      "image_source": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/images/woman_model_silhouette.jpg",
       "thumbnail_url": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/thumbs/woman_model_silhouette.jpg",
       "is_premium": false,
       "sort_order": 261
@@ -2631,7 +2631,7 @@
       "name": "Jellyfish Sea Dangerous",
       "category": "Nature",
       "type": "video",
-      "video_source": "bundled:videos/jellyfish_sea_dangerous.mp4",
+      "video_source": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/videos/jellyfish_sea_dangerous.mp4",
       "thumbnail_url": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/thumbs/jellyfish_sea_dangerous.jpg",
       "is_premium": true,
       "sort_order": 262
@@ -2691,7 +2691,7 @@
       "name": "Girl Neon Lights",
       "category": "City",
       "type": "image",
-      "image_source": "bundled:images/girl_neon_lights.jpg",
+      "image_source": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/images/girl_neon_lights.jpg",
       "thumbnail_url": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/thumbs/girl_neon_lights.jpg",
       "is_premium": false,
       "sort_order": 268
@@ -2721,7 +2721,7 @@
       "name": "Mountains Fog Clouds",
       "category": "Nature",
       "type": "video",
-      "video_source": "bundled:videos/mountains_fog_clouds.mp4",
+      "video_source": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/videos/mountains_fog_clouds.mp4",
       "thumbnail_url": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/thumbs/mountains_fog_clouds.jpg",
       "is_premium": true,
       "sort_order": 271
@@ -2761,7 +2761,7 @@
       "name": "Neon Light Neon",
       "category": "City",
       "type": "image",
-      "image_source": "bundled:images/neon_light_neon.jpg",
+      "image_source": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/images/neon_light_neon.jpg",
       "thumbnail_url": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/thumbs/neon_light_neon.jpg",
       "is_premium": false,
       "sort_order": 275
@@ -2811,7 +2811,7 @@
       "name": "Skyline Traffic Night",
       "category": "City",
       "type": "video",
-      "video_source": "bundled:videos/skyline_traffic_night.mp4",
+      "video_source": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/videos/skyline_traffic_night.mp4",
       "thumbnail_url": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/thumbs/skyline_traffic_night.jpg",
       "is_premium": false,
       "sort_order": 280
@@ -2871,7 +2871,7 @@
       "name": "Paris Montmartre France",
       "category": "City",
       "type": "image",
-      "image_source": "bundled:images/paris_montmartre_france.jpg",
+      "image_source": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/images/paris_montmartre_france.jpg",
       "thumbnail_url": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/thumbs/paris_montmartre_france.jpg",
       "is_premium": false,
       "sort_order": 286
@@ -2901,7 +2901,7 @@
       "name": "Ocean Beach Sunset",
       "category": "Nature",
       "type": "video",
-      "video_source": "bundled:videos/ocean_beach_sunset.mp4",
+      "video_source": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/videos/ocean_beach_sunset.mp4",
       "thumbnail_url": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/thumbs/ocean_beach_sunset.jpg",
       "is_premium": true,
       "sort_order": 289
@@ -2971,7 +2971,7 @@
       "name": "Sign Neon Sign",
       "category": "City",
       "type": "image",
-      "image_source": "bundled:images/sign_neon_sign.jpg",
+      "image_source": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/images/sign_neon_sign.jpg",
       "thumbnail_url": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/thumbs/sign_neon_sign.jpg",
       "is_premium": false,
       "sort_order": 296
@@ -2991,7 +2991,7 @@
       "name": "Japan Street Night",
       "category": "City",
       "type": "video",
-      "video_source": "bundled:videos/japan_street_night.mp4",
+      "video_source": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/videos/japan_street_night.mp4",
       "thumbnail_url": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/thumbs/japan_street_night.jpg",
       "is_premium": false,
       "sort_order": 298
@@ -3081,7 +3081,7 @@
       "name": "Underwater Sea Ocean",
       "category": "Nature",
       "type": "video",
-      "video_source": "bundled:videos/underwater_sea_ocean.mp4",
+      "video_source": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/videos/underwater_sea_ocean.mp4",
       "thumbnail_url": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/thumbs/underwater_sea_ocean.jpg",
       "is_premium": true,
       "sort_order": 307
@@ -3171,7 +3171,7 @@
       "name": "Waterfall Mountain Stream",
       "category": "Nature",
       "type": "video",
-      "video_source": "bundled:videos/waterfall_mountain_stream.mp4",
+      "video_source": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/videos/waterfall_mountain_stream.mp4",
       "thumbnail_url": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/thumbs/waterfall_mountain_stream.jpg",
       "is_premium": true,
       "sort_order": 316
@@ -3351,7 +3351,7 @@
       "name": "Sunset Canal City",
       "category": "City",
       "type": "video",
-      "video_source": "bundled:videos/sunset_canal_city.mp4",
+      "video_source": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/videos/sunset_canal_city.mp4",
       "thumbnail_url": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/thumbs/sunset_canal_city.jpg",
       "is_premium": false,
       "sort_order": 334
@@ -3441,7 +3441,7 @@
       "name": "Rain Thunder Water",
       "category": "Nature",
       "type": "video",
-      "video_source": "bundled:videos/rain_thunder_water.mp4",
+      "video_source": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/videos/rain_thunder_water.mp4",
       "thumbnail_url": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/thumbs/rain_thunder_water.jpg",
       "is_premium": true,
       "sort_order": 343
@@ -3711,7 +3711,7 @@
       "name": "City New York",
       "category": "City",
       "type": "video",
-      "video_source": "bundled:videos/city_new_york.mp4",
+      "video_source": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/videos/city_new_york.mp4",
       "thumbnail_url": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/thumbs/city_new_york.jpg",
       "is_premium": false,
       "sort_order": 370
@@ -3801,7 +3801,7 @@
       "name": "Shanghai Tall Buildings",
       "category": "City",
       "type": "video",
-      "video_source": "bundled:videos/shanghai_tall_buildings.mp4",
+      "video_source": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/videos/shanghai_tall_buildings.mp4",
       "thumbnail_url": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/thumbs/shanghai_tall_buildings.jpg",
       "is_premium": false,
       "sort_order": 379
@@ -3891,7 +3891,7 @@
       "name": "Rain Rain Outside",
       "category": "Nature",
       "type": "video",
-      "video_source": "bundled:videos/rain_rain_outside.mp4",
+      "video_source": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/videos/rain_rain_outside.mp4",
       "thumbnail_url": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/thumbs/rain_rain_outside.jpg",
       "is_premium": false,
       "sort_order": 388
@@ -3911,7 +3911,7 @@
       "name": "Grasses Meadow Nature",
       "category": "Nature",
       "type": "image",
-      "image_source": "bundled:images/grasses_meadow_nature.jpg",
+      "image_source": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/images/grasses_meadow_nature.jpg",
       "thumbnail_url": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/thumbs/grasses_meadow_nature.jpg",
       "is_premium": false,
       "sort_order": 390
@@ -3951,7 +3951,7 @@
       "name": "Lilies Flowers Plant",
       "category": "Nature",
       "type": "image",
-      "image_source": "bundled:images/lilies_flowers_plant.jpg",
+      "image_source": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/images/lilies_flowers_plant.jpg",
       "thumbnail_url": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/thumbs/lilies_flowers_plant.jpg",
       "is_premium": false,
       "sort_order": 394
@@ -3981,7 +3981,7 @@
       "name": "Raindrop Drops Rain",
       "category": "Nature",
       "type": "video",
-      "video_source": "bundled:videos/raindrop_drops_rain.mp4",
+      "video_source": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/videos/raindrop_drops_rain.mp4",
       "thumbnail_url": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/thumbs/raindrop_drops_rain.jpg",
       "is_premium": false,
       "sort_order": 397
@@ -3991,7 +3991,7 @@
       "name": "Girl Sunset Sunset",
       "category": "Nature",
       "type": "image",
-      "image_source": "bundled:images/girl_sunset_sunset.jpg",
+      "image_source": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/images/girl_sunset_sunset.jpg",
       "thumbnail_url": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/thumbs/girl_sunset_sunset.jpg",
       "is_premium": false,
       "sort_order": 398
@@ -4041,7 +4041,7 @@
       "name": "Nature Sky Clouds",
       "category": "Nature",
       "type": "image",
-      "image_source": "bundled:images/nature_sky_clouds.jpg",
+      "image_source": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/images/nature_sky_clouds.jpg",
       "thumbnail_url": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/thumbs/nature_sky_clouds.jpg",
       "is_premium": false,
       "sort_order": 403
@@ -4051,7 +4051,7 @@
       "name": "Dog Husky Field",
       "category": "Nature",
       "type": "image",
-      "image_source": "bundled:images/dog_husky_field.jpg",
+      "image_source": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/images/dog_husky_field.jpg",
       "thumbnail_url": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/thumbs/dog_husky_field.jpg",
       "is_premium": false,
       "sort_order": 404
@@ -4071,7 +4071,7 @@
       "name": "Cloud Sky Grey",
       "category": "Nature",
       "type": "video",
-      "video_source": "bundled:videos/cloud_sky_grey.mp4",
+      "video_source": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/videos/cloud_sky_grey.mp4",
       "thumbnail_url": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/thumbs/cloud_sky_grey.jpg",
       "is_premium": false,
       "sort_order": 406
@@ -4131,7 +4131,7 @@
       "name": "Clouds Sky Sunset",
       "category": "Nature",
       "type": "image",
-      "image_source": "bundled:images/clouds_sky_sunset.jpg",
+      "image_source": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/images/clouds_sky_sunset.jpg",
       "thumbnail_url": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/thumbs/clouds_sky_sunset.jpg",
       "is_premium": false,
       "sort_order": 412
@@ -4161,7 +4161,7 @@
       "name": "Rain Raindrop Beautiful",
       "category": "Nature",
       "type": "video",
-      "video_source": "bundled:videos/rain_raindrop_beautiful.mp4",
+      "video_source": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/videos/rain_raindrop_beautiful.mp4",
       "thumbnail_url": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/thumbs/rain_raindrop_beautiful.jpg",
       "is_premium": false,
       "sort_order": 415
@@ -4211,7 +4211,7 @@
       "name": "Caterpillar Dovetail Butterfly",
       "category": "Nature",
       "type": "image",
-      "image_source": "bundled:images/caterpillar_dovetail_butterfly.jpg",
+      "image_source": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/images/caterpillar_dovetail_butterfly.jpg",
       "thumbnail_url": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/thumbs/caterpillar_dovetail_butterfly.jpg",
       "is_premium": false,
       "sort_order": 420
@@ -4251,7 +4251,7 @@
       "name": "Cloud Sky Grey 2",
       "category": "Nature",
       "type": "video",
-      "video_source": "bundled:videos/cloud_sky_grey_2.mp4",
+      "video_source": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/videos/cloud_sky_grey_2.mp4",
       "thumbnail_url": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/thumbs/cloud_sky_grey_2.jpg",
       "is_premium": false,
       "sort_order": 424
@@ -4281,7 +4281,7 @@
       "name": "Trees Forest Sunset",
       "category": "Nature",
       "type": "image",
-      "image_source": "bundled:images/trees_forest_sunset.jpg",
+      "image_source": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/images/trees_forest_sunset.jpg",
       "thumbnail_url": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/thumbs/trees_forest_sunset.jpg",
       "is_premium": false,
       "sort_order": 427
@@ -4301,7 +4301,7 @@
       "name": "Sunset Sunrise Sunlight",
       "category": "Nature",
       "type": "image",
-      "image_source": "bundled:images/sunset_sunrise_sunlight.jpg",
+      "image_source": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/images/sunset_sunrise_sunlight.jpg",
       "thumbnail_url": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/thumbs/sunset_sunrise_sunlight.jpg",
       "is_premium": false,
       "sort_order": 429
@@ -4341,7 +4341,7 @@
       "name": "Fireplace Winter Christmas",
       "category": "Nature",
       "type": "video",
-      "video_source": "bundled:videos/fireplace_winter_christmas.mp4",
+      "video_source": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/videos/fireplace_winter_christmas.mp4",
       "thumbnail_url": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/thumbs/fireplace_winter_christmas.jpg",
       "is_premium": false,
       "sort_order": 433
@@ -4401,7 +4401,7 @@
       "name": "Ocean Teriberka Nature",
       "category": "Nature",
       "type": "image",
-      "image_source": "bundled:images/ocean_teriberka_nature.jpg",
+      "image_source": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/images/ocean_teriberka_nature.jpg",
       "thumbnail_url": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/thumbs/ocean_teriberka_nature.jpg",
       "is_premium": false,
       "sort_order": 439
@@ -4471,7 +4471,7 @@
       "name": "Woman Nature Braid",
       "category": "Nature",
       "type": "image",
-      "image_source": "bundled:images/woman_nature_braid.jpg",
+      "image_source": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/images/woman_nature_braid.jpg",
       "thumbnail_url": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/thumbs/woman_nature_braid.jpg",
       "is_premium": false,
       "sort_order": 446
@@ -4591,7 +4591,7 @@
       "name": "Italy Karersee Lago",
       "category": "Nature",
       "type": "image",
-      "image_source": "bundled:images/italy_karersee_lago.jpg",
+      "image_source": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/images/italy_karersee_lago.jpg",
       "thumbnail_url": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/thumbs/italy_karersee_lago.jpg",
       "is_premium": false,
       "sort_order": 458
@@ -4691,7 +4691,7 @@
       "name": "Canvas Spider Insect",
       "category": "Nature",
       "type": "image",
-      "image_source": "bundled:images/canvas_spider_insect.jpg",
+      "image_source": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/images/canvas_spider_insect.jpg",
       "thumbnail_url": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/thumbs/canvas_spider_insect.jpg",
       "is_premium": false,
       "sort_order": 468
@@ -4711,7 +4711,7 @@
       "name": "Rain Beautiful Wallpaper",
       "category": "Nature",
       "type": "video",
-      "video_source": "bundled:videos/rain_beautiful_wallpaper.mp4",
+      "video_source": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/videos/rain_beautiful_wallpaper.mp4",
       "thumbnail_url": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/thumbs/rain_beautiful_wallpaper.jpg",
       "is_premium": false,
       "sort_order": 470
@@ -4791,7 +4791,7 @@
       "name": "Waterfall Rainbow River",
       "category": "Nature",
       "type": "video",
-      "video_source": "bundled:videos/waterfall_rainbow_river.mp4",
+      "video_source": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/videos/waterfall_rainbow_river.mp4",
       "thumbnail_url": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/thumbs/waterfall_rainbow_river.jpg",
       "is_premium": false,
       "sort_order": 478
@@ -4891,7 +4891,7 @@
       "name": "Alps Fall Landscape",
       "category": "Nature",
       "type": "image",
-      "image_source": "bundled:images/alps_fall_landscape.jpg",
+      "image_source": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/images/alps_fall_landscape.jpg",
       "thumbnail_url": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/thumbs/alps_fall_landscape.jpg",
       "is_premium": false,
       "sort_order": 488
@@ -5201,7 +5201,7 @@
       "name": "Allgu Alps Alpine",
       "category": "Nature",
       "type": "image",
-      "image_source": "bundled:images/allgu_alps_alpine.jpg",
+      "image_source": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/images/allgu_alps_alpine.jpg",
       "thumbnail_url": "https://pub-9c840943cefb4a9b87578826c43674a5.r2.dev/thumbs/allgu_alps_alpine.jpg",
       "is_premium": false,
       "sort_order": 519

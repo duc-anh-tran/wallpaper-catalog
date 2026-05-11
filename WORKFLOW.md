@@ -25,8 +25,9 @@ All scripts are run from the `wallpaper-catalog/` directory.
 │  3. bash scripts/generate_catalog.sh                                 │
 │  4. bash scripts/upload_to_r2.sh                                     │
 │  5. python3 scripts/mark_premium.py                                  │
-│  6. git add docs/wallpapers.json && git commit -m "update" && git push│
-│  7. Clear app cache on device to see new wallpapers                  │
+│  6. python3 scripts/reorder_catalog.py                               │
+│  7. git add docs/wallpapers.json && git commit -m "update" && git push│
+│  8. Clear app cache on device to see new wallpapers                  │
 └──────────────────────────────────────────────────────────────────────┘
 ```
 
@@ -39,8 +40,9 @@ All scripts are run from the `wallpaper-catalog/` directory.
 │  3. bash scripts/generate_catalog.sh --bundled                       │
 │  4. bash scripts/sync_to_app.sh                                      │
 │  5. python3 scripts/mark_premium.py                                  │
-│  6. git add docs/ && git commit -m "update" && git push              │
-│  7. cd ../live-wallpaper && ./gradlew assembleDebug                  │
+│  6. python3 scripts/reorder_catalog.py                               │
+│  7. git add docs/ && git commit -m "update" && git push              │
+│  8. cd ../live-wallpaper && ./gradlew assembleDebug                  │
 └──────────────────────────────────────────────────────────────────────┘
 ```
 
@@ -49,7 +51,7 @@ All scripts are run from the `wallpaper-catalog/` directory.
 ```bash
 cd wallpaper-catalog
 bash scripts/run_all.sh              # remote pipeline — DEFAULT (steps 1-6)
-bash scripts/run_all.sh --bundled    # bundled pipeline (steps 1-6)
+bash scripts/run_all.sh --bundled    # bundled pipeline (steps 1-7)
 ```
 
 ## Quick Start
@@ -130,7 +132,18 @@ python3 scripts/mark_premium.py
 - New wallpapers get popularity data saved during download (step 1)
 - If you have entries missing popularity data, run `python3 scripts/backfill_popularity.py` first
 
-### 6. Push catalog to GitHub Pages
+### 6. Reorder catalog for variety
+
+```bash
+python3 scripts/reorder_catalog.py
+```
+
+- Interleaves categories so users never see more than 3 consecutive items from the same category
+- Premium (most visually striking) items appear first within each category
+- Videos spread evenly throughout instead of front-loaded
+- Re-runnable — recalculates from scratch every time
+
+### 7. Push catalog to GitHub Pages
 
 ```bash
 git add docs/wallpapers.json
@@ -140,7 +153,7 @@ git push
 
 No app rebuild needed — the app fetches the updated catalog from GitHub Pages.
 
-### 7. See changes on device
+### 8. See changes on device
 
 The app caches the catalog for **24 hours**. After pushing, users (and you) won't see new wallpapers until:
 
@@ -197,7 +210,15 @@ python3 scripts/mark_premium.py
 
 - Same as remote step 5 — marks top 30% by popularity
 
-### 6. Push catalog & build
+### 6. Reorder catalog for variety
+
+```bash
+python3 scripts/reorder_catalog.py
+```
+
+- Same as remote step 6 — interleaves categories and spreads videos
+
+### 7. Push catalog & build
 
 ```bash
 git add docs/ && git commit -m "Update catalog" && git push

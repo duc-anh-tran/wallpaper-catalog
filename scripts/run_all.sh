@@ -19,58 +19,68 @@ if [ "$BUNDLED_MODE" = true ]; then
     echo "============================================"
 
     echo ""
-    echo "Step 1/4: Downloading from Pixabay..."
+    echo "Step 1/7: Downloading from Pixabay..."
     echo "--------------------------------------------"
     python3 "$SCRIPT_DIR/download_from_pixabay.py"
 
     echo ""
-    echo "Step 2/4: Compressing videos (LQ for APK)..."
+    echo "Step 2/7: Compressing videos (LQ for APK)..."
     echo "--------------------------------------------"
     bash "$SCRIPT_DIR/compress_videos.sh" --lq
 
     echo ""
-    echo "Step 3/4: Generating thumbnails & catalog..."
+    echo "Step 3/7: Generating thumbnails & catalog..."
     echo "--------------------------------------------"
     bash "$SCRIPT_DIR/generate_catalog.sh" --bundled
 
     echo ""
-    echo "Step 4/5: Syncing to Android app..."
+    echo "Step 4/7: Syncing to Android app..."
     echo "--------------------------------------------"
     bash "$SCRIPT_DIR/sync_to_app.sh"
 
     echo ""
-    echo "Step 5/5: Marking premium (top 30% by popularity)..."
+    echo "Step 5/7: Marking premium (top 30% by popularity)..."
     echo "--------------------------------------------"
     python3 "$SCRIPT_DIR/mark_premium.py"
+
+    echo ""
+    echo "Step 6/7: Reordering catalog for variety..."
+    echo "--------------------------------------------"
+    python3 "$SCRIPT_DIR/reorder_catalog.py"
 else
     echo "============================================"
     echo "  Wallpaper Catalog — Remote Pipeline (R2)"
     echo "============================================"
 
     echo ""
-    echo "Step 1/4: Downloading from Pixabay..."
+    echo "Step 1/6: Downloading from Pixabay..."
     echo "--------------------------------------------"
     python3 "$SCRIPT_DIR/download_from_pixabay.py"
 
     echo ""
-    echo "Step 2/4: Compressing videos (HQ for R2)..."
+    echo "Step 2/6: Compressing videos (HQ for R2)..."
     echo "--------------------------------------------"
     bash "$SCRIPT_DIR/compress_videos.sh"
 
     echo ""
-    echo "Step 3/4: Generating thumbnails & catalog (remote)..."
+    echo "Step 3/6: Generating thumbnails & catalog (remote)..."
     echo "--------------------------------------------"
     bash "$SCRIPT_DIR/generate_catalog.sh"
 
     echo ""
-    echo "Step 4/5: Uploading to Cloudflare R2..."
+    echo "Step 4/6: Uploading to Cloudflare R2..."
     echo "--------------------------------------------"
     bash "$SCRIPT_DIR/upload_to_r2.sh"
 
     echo ""
-    echo "Step 5/5: Marking premium (top 30% by popularity)..."
+    echo "Step 5/6: Marking premium (top 30% by popularity)..."
     echo "--------------------------------------------"
     python3 "$SCRIPT_DIR/mark_premium.py"
+
+    echo ""
+    echo "Step 6/6: Reordering catalog for variety..."
+    echo "--------------------------------------------"
+    python3 "$SCRIPT_DIR/reorder_catalog.py"
 fi
 
 echo ""
